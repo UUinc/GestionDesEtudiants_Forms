@@ -22,129 +22,129 @@ Partial Class LoginPage
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.signin_label = New System.Windows.Forms.Label()
+        Me.usericon_pic = New System.Windows.Forms.PictureBox()
+        Me.username_bg = New System.Windows.Forms.PictureBox()
+        Me.username_tb = New System.Windows.Forms.TextBox()
+        Me.username_pic = New System.Windows.Forms.PictureBox()
+        Me.password_pic = New System.Windows.Forms.PictureBox()
+        Me.password_tb = New System.Windows.Forms.TextBox()
+        Me.password_bg = New System.Windows.Forms.PictureBox()
+        Me.login_btn = New System.Windows.Forms.Button()
+        CType(Me.usericon_pic, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.username_bg, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.username_pic, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.password_pic, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.password_bg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
+        'signin_label
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label1.Font = New System.Drawing.Font("Roboto Lt", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.Label1.Location = New System.Drawing.Point(386, 254)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(132, 44)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Sign In"
+        Me.signin_label.AutoSize = True
+        Me.signin_label.BackColor = System.Drawing.Color.Transparent
+        Me.signin_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.signin_label.Font = New System.Drawing.Font("Roboto Lt", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.signin_label.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.signin_label.Location = New System.Drawing.Point(386, 254)
+        Me.signin_label.Name = "signin_label"
+        Me.signin_label.Size = New System.Drawing.Size(132, 44)
+        Me.signin_label.TabIndex = 1
+        Me.signin_label.Text = "Sign In"
         '
-        'PictureBox1
+        'usericon_pic
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.usericon2
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(404, 155)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(90, 90)
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.usericon_pic.BackColor = System.Drawing.Color.Transparent
+        Me.usericon_pic.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.usericon2
+        Me.usericon_pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.usericon_pic.Location = New System.Drawing.Point(404, 155)
+        Me.usericon_pic.Name = "usericon_pic"
+        Me.usericon_pic.Size = New System.Drawing.Size(90, 90)
+        Me.usericon_pic.TabIndex = 2
+        Me.usericon_pic.TabStop = False
         '
-        'PictureBox2
+        'username_bg
         '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.square2_BG
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox2.Location = New System.Drawing.Point(295, 313)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(320, 60)
-        Me.PictureBox2.TabIndex = 4
-        Me.PictureBox2.TabStop = False
+        Me.username_bg.BackColor = System.Drawing.Color.Transparent
+        Me.username_bg.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.square2_BG
+        Me.username_bg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.username_bg.Location = New System.Drawing.Point(295, 313)
+        Me.username_bg.Name = "username_bg"
+        Me.username_bg.Size = New System.Drawing.Size(320, 60)
+        Me.username_bg.TabIndex = 4
+        Me.username_bg.TabStop = False
         '
-        'TextBox2
+        'username_tb
         '
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Roboto Lt", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.ForeColor = System.Drawing.Color.Gray
-        Me.TextBox2.Location = New System.Drawing.Point(361, 330)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(220, 26)
-        Me.TextBox2.TabIndex = 5
-        Me.TextBox2.Text = "Username"
+        Me.username_tb.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.username_tb.Font = New System.Drawing.Font("Roboto Lt", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.username_tb.ForeColor = System.Drawing.Color.Gray
+        Me.username_tb.Location = New System.Drawing.Point(361, 330)
+        Me.username_tb.Name = "username_tb"
+        Me.username_tb.Size = New System.Drawing.Size(220, 26)
+        Me.username_tb.TabIndex = 5
+        Me.username_tb.Text = "Username"
         '
-        'PictureBox3
+        'username_pic
         '
-        Me.PictureBox3.BackColor = System.Drawing.Color.White
-        Me.PictureBox3.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.user
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox3.Location = New System.Drawing.Point(308, 328)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox3.TabIndex = 6
-        Me.PictureBox3.TabStop = False
+        Me.username_pic.BackColor = System.Drawing.Color.White
+        Me.username_pic.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.user
+        Me.username_pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.username_pic.Location = New System.Drawing.Point(308, 328)
+        Me.username_pic.Name = "username_pic"
+        Me.username_pic.Size = New System.Drawing.Size(30, 30)
+        Me.username_pic.TabIndex = 6
+        Me.username_pic.TabStop = False
         '
-        'PictureBox4
+        'password_pic
         '
-        Me.PictureBox4.BackColor = System.Drawing.Color.White
-        Me.PictureBox4.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.padlock
-        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox4.Location = New System.Drawing.Point(308, 416)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox4.TabIndex = 9
-        Me.PictureBox4.TabStop = False
+        Me.password_pic.BackColor = System.Drawing.Color.White
+        Me.password_pic.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.padlock
+        Me.password_pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.password_pic.Location = New System.Drawing.Point(308, 416)
+        Me.password_pic.Name = "password_pic"
+        Me.password_pic.Size = New System.Drawing.Size(30, 30)
+        Me.password_pic.TabIndex = 9
+        Me.password_pic.TabStop = False
         '
-        'TextBox1
+        'password_tb
         '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Roboto Lt", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.Color.Gray
-        Me.TextBox1.Location = New System.Drawing.Point(361, 418)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(220, 26)
-        Me.TextBox1.TabIndex = 8
-        Me.TextBox1.Text = "Password"
+        Me.password_tb.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.password_tb.Font = New System.Drawing.Font("Roboto Lt", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.password_tb.ForeColor = System.Drawing.Color.Gray
+        Me.password_tb.Location = New System.Drawing.Point(361, 418)
+        Me.password_tb.Name = "password_tb"
+        Me.password_tb.Size = New System.Drawing.Size(220, 26)
+        Me.password_tb.TabIndex = 8
+        Me.password_tb.Text = "Password"
         '
-        'PictureBox5
+        'password_bg
         '
-        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox5.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.square2_BG
-        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox5.Location = New System.Drawing.Point(295, 401)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(320, 60)
-        Me.PictureBox5.TabIndex = 7
-        Me.PictureBox5.TabStop = False
+        Me.password_bg.BackColor = System.Drawing.Color.Transparent
+        Me.password_bg.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.square2_BG
+        Me.password_bg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.password_bg.Location = New System.Drawing.Point(295, 401)
+        Me.password_bg.Name = "password_bg"
+        Me.password_bg.Size = New System.Drawing.Size(320, 60)
+        Me.password_bg.TabIndex = 7
+        Me.password_bg.TabStop = False
         '
-        'Button1
+        'login_btn
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.Button
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Roboto Lt", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(295, 489)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(320, 60)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Login"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.login_btn.BackColor = System.Drawing.Color.Transparent
+        Me.login_btn.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.Button
+        Me.login_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.login_btn.FlatAppearance.BorderSize = 0
+        Me.login_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.login_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.login_btn.Font = New System.Drawing.Font("Roboto Lt", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.login_btn.ForeColor = System.Drawing.Color.White
+        Me.login_btn.Location = New System.Drawing.Point(295, 489)
+        Me.login_btn.Name = "login_btn"
+        Me.login_btn.Size = New System.Drawing.Size(320, 60)
+        Me.login_btn.TabIndex = 10
+        Me.login_btn.Text = "Login"
+        Me.login_btn.UseVisualStyleBackColor = False
         '
         'LoginPage
         '
@@ -153,38 +153,38 @@ Partial Class LoginPage
         Me.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.BG21
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(884, 861)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.PictureBox4)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.PictureBox5)
-        Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.login_btn)
+        Me.Controls.Add(Me.password_pic)
+        Me.Controls.Add(Me.password_tb)
+        Me.Controls.Add(Me.password_bg)
+        Me.Controls.Add(Me.username_pic)
+        Me.Controls.Add(Me.username_tb)
+        Me.Controls.Add(Me.username_bg)
+        Me.Controls.Add(Me.usericon_pic)
+        Me.Controls.Add(Me.signin_label)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.Name = "LoginPage"
         Me.ShowIcon = False
         Me.Text = "Sign In"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.usericon_pic, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.username_bg, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.username_pic, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.password_pic, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.password_bg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents signin_label As System.Windows.Forms.Label
+    Friend WithEvents usericon_pic As System.Windows.Forms.PictureBox
+    Friend WithEvents username_bg As System.Windows.Forms.PictureBox
+    Friend WithEvents username_tb As System.Windows.Forms.TextBox
+    Friend WithEvents username_pic As System.Windows.Forms.PictureBox
+    Friend WithEvents password_pic As System.Windows.Forms.PictureBox
+    Friend WithEvents password_tb As System.Windows.Forms.TextBox
+    Friend WithEvents password_bg As System.Windows.Forms.PictureBox
+    Friend WithEvents login_btn As System.Windows.Forms.Button
 
 End Class
