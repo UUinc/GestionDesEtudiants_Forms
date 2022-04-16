@@ -127,8 +127,14 @@
   <data name="usericon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usericon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Button_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="squareOpaque" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\squareOpaque.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="padlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\padlock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,7 +166,7 @@
   <data name="squareOpaque2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\squareOpaque2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BG21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BG2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Button_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button_click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
