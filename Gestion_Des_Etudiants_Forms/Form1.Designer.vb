@@ -79,6 +79,7 @@ Partial Class LoginPage
         Me.username_tb.Font = New System.Drawing.Font("Roboto Lt", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.username_tb.ForeColor = System.Drawing.Color.Gray
         Me.username_tb.Location = New System.Drawing.Point(361, 330)
+        Me.username_tb.MaxLength = 64
         Me.username_tb.Name = "username_tb"
         Me.username_tb.Size = New System.Drawing.Size(220, 26)
         Me.username_tb.TabIndex = 5
@@ -111,7 +112,9 @@ Partial Class LoginPage
         Me.password_tb.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.password_tb.Font = New System.Drawing.Font("Roboto Lt", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.password_tb.ForeColor = System.Drawing.Color.Gray
+        Me.password_tb.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.password_tb.Location = New System.Drawing.Point(361, 418)
+        Me.password_tb.MaxLength = 64
         Me.password_tb.Name = "password_tb"
         Me.password_tb.Size = New System.Drawing.Size(220, 26)
         Me.password_tb.TabIndex = 8
