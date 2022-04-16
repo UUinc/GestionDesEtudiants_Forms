@@ -1,4 +1,8 @@
-﻿Public Class LoginPage
+﻿Imports System.Data.OleDb
+
+Public Class LoginPage
+    'database connection
+    Dim Connection As New OleDbConnection(My.Settings.GestionDesEtudiants_DBConnectionString)
 
     'mouse hover the login button
     Private Sub login_btn_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles login_btn.MouseHover
@@ -42,6 +46,24 @@
         If password_tb.Text = "" Then
             password_tb.Text = "Password"
             password_tb.PasswordChar = ""
+        End If
+    End Sub
+    'Login button click
+    Private Sub login_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles login_btn.Click
+
+        If Connection.State = ConnectionState.Closed Then
+            Connection.Open()
+        End If
+
+        Dim cmd As New OleDbCommand("select count(*) from login where username=? and password=?", Connection)
+        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = username_tb.Text
+        cmd.Parameters.AddWithValue("@2", OleDbType.VarChar).Value = password_tb.Text
+        Dim count = Convert.ToInt32(cmd.ExecuteScalar())
+
+        If count > 0 Then
+            MsgBox("Login succeeded", MsgBoxStyle.Information)
+        Else
+            MsgBox("Username or Password is incorrect", MsgBoxStyle.Critical)
         End If
     End Sub
 End Class
