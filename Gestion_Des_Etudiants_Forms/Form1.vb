@@ -62,6 +62,14 @@ Public Class LoginPage
 
         If count > 0 Then
             MsgBox("Login succeeded", MsgBoxStyle.Information)
+
+            'show and set same location as loginpage
+            Home.Show()
+            Home.Location = Me.Location
+
+            'hide loginpage
+            Me.Hide()
+
         Else
             MsgBox("Username or Password is incorrect", MsgBoxStyle.Critical)
         End If

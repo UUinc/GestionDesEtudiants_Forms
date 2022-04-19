@@ -43,11 +43,11 @@ Partial Class LoginPage
         Me.signin_label.AutoSize = True
         Me.signin_label.BackColor = System.Drawing.Color.Transparent
         Me.signin_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.signin_label.Font = New System.Drawing.Font("Roboto Lt", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.signin_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.signin_label.ForeColor = System.Drawing.SystemColors.GrayText
         Me.signin_label.Location = New System.Drawing.Point(386, 254)
         Me.signin_label.Name = "signin_label"
-        Me.signin_label.Size = New System.Drawing.Size(132, 44)
+        Me.signin_label.Size = New System.Drawing.Size(133, 42)
         Me.signin_label.TabIndex = 1
         Me.signin_label.Text = "Sign In"
         '
@@ -76,12 +76,12 @@ Partial Class LoginPage
         'username_tb
         '
         Me.username_tb.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.username_tb.Font = New System.Drawing.Font("Roboto Lt", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.username_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.username_tb.ForeColor = System.Drawing.Color.Gray
         Me.username_tb.Location = New System.Drawing.Point(361, 330)
         Me.username_tb.MaxLength = 64
         Me.username_tb.Name = "username_tb"
-        Me.username_tb.Size = New System.Drawing.Size(220, 26)
+        Me.username_tb.Size = New System.Drawing.Size(220, 24)
         Me.username_tb.TabIndex = 5
         Me.username_tb.Text = "Username"
         '
@@ -110,13 +110,13 @@ Partial Class LoginPage
         'password_tb
         '
         Me.password_tb.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.password_tb.Font = New System.Drawing.Font("Roboto Lt", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.password_tb.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.password_tb.ForeColor = System.Drawing.Color.Gray
         Me.password_tb.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.password_tb.Location = New System.Drawing.Point(361, 418)
         Me.password_tb.MaxLength = 64
         Me.password_tb.Name = "password_tb"
-        Me.password_tb.Size = New System.Drawing.Size(220, 26)
+        Me.password_tb.Size = New System.Drawing.Size(220, 24)
         Me.password_tb.TabIndex = 8
         Me.password_tb.Text = "Password"
         '
@@ -140,7 +140,7 @@ Partial Class LoginPage
         Me.login_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.login_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.login_btn.Font = New System.Drawing.Font("Roboto Lt", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.login_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.login_btn.ForeColor = System.Drawing.Color.White
         Me.login_btn.Location = New System.Drawing.Point(295, 489)
         Me.login_btn.Name = "login_btn"
@@ -170,7 +170,7 @@ Partial Class LoginPage
         Me.MaximizeBox = False
         Me.Name = "LoginPage"
         Me.ShowIcon = False
-        Me.Text = "Sign In"
+        Me.Text = "Gestion des etudiants - Sign In"
         CType(Me.usericon_pic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.username_bg, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.username_pic, System.ComponentModel.ISupportInitialize).EndInit()
