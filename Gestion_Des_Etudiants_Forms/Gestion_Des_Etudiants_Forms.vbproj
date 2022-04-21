@@ -72,11 +72,11 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="LoginPage.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="LoginPage.Designer.vb">
+      <DependentUpon>LoginPage.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GestionDesEtudiants_DBDataSet.Designer.vb">
@@ -84,10 +84,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GestionDesEtudiants_DBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Home.Designer.vb">
-      <DependentUpon>Home.vb</DependentUpon>
+    <Compile Include="AdminPage.Designer.vb">
+      <DependentUpon>AdminPage.vb</DependentUpon>
     </Compile>
-    <Compile Include="Home.vb">
+    <Compile Include="AdminPage.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -113,11 +113,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.vb</DependentUpon>
+    <EmbeddedResource Include="AdminPage.resx">
+      <DependentUpon>AdminPage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -207,6 +207,12 @@
     <Content Include="GestionDesEtudiants_DB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\view-user.png" />
+    <None Include="Resources\delete-user.png" />
+    <None Include="Resources\edit-user.png" />
+    <None Include="Resources\add-user2.png" />
+    <None Include="Resources\log-out.png" />
+    <None Include="Resources\adminpng.png" />
     <None Include="Resources\BG_Home.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

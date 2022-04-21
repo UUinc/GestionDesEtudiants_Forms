@@ -31,6 +31,7 @@ Partial Class LoginPage
         Me.password_tb = New System.Windows.Forms.TextBox()
         Me.password_bg = New System.Windows.Forms.PictureBox()
         Me.login_btn = New System.Windows.Forms.Button()
+        Me.erreur_l = New System.Windows.Forms.Label()
         CType(Me.usericon_pic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.username_bg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.username_pic, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,7 +45,7 @@ Partial Class LoginPage
         Me.signin_label.BackColor = System.Drawing.Color.Transparent
         Me.signin_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.signin_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.signin_label.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.signin_label.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.signin_label.Location = New System.Drawing.Point(386, 254)
         Me.signin_label.Name = "signin_label"
         Me.signin_label.Size = New System.Drawing.Size(133, 42)
@@ -146,8 +147,22 @@ Partial Class LoginPage
         Me.login_btn.Name = "login_btn"
         Me.login_btn.Size = New System.Drawing.Size(320, 60)
         Me.login_btn.TabIndex = 10
-        Me.login_btn.Text = "Login"
+        Me.login_btn.Text = "Log In"
         Me.login_btn.UseVisualStyleBackColor = False
+        '
+        'erreur_l
+        '
+        Me.erreur_l.AutoSize = True
+        Me.erreur_l.BackColor = System.Drawing.Color.Transparent
+        Me.erreur_l.Font = New System.Drawing.Font("Roboto Lt", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.erreur_l.ForeColor = System.Drawing.Color.Crimson
+        Me.erreur_l.Location = New System.Drawing.Point(333, 380)
+        Me.erreur_l.Name = "erreur_l"
+        Me.erreur_l.Size = New System.Drawing.Size(242, 18)
+        Me.erreur_l.TabIndex = 11
+        Me.erreur_l.Text = "Sorry, your password was incorrect."
+        Me.erreur_l.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.erreur_l.Visible = False
         '
         'LoginPage
         '
@@ -156,6 +171,7 @@ Partial Class LoginPage
         Me.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.BG21
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(884, 861)
+        Me.Controls.Add(Me.erreur_l)
         Me.Controls.Add(Me.login_btn)
         Me.Controls.Add(Me.password_pic)
         Me.Controls.Add(Me.password_tb)
@@ -189,5 +205,6 @@ Partial Class LoginPage
     Friend WithEvents password_tb As System.Windows.Forms.TextBox
     Friend WithEvents password_bg As System.Windows.Forms.PictureBox
     Friend WithEvents login_btn As System.Windows.Forms.Button
+    Friend WithEvents erreur_l As System.Windows.Forms.Label
 
 End Class

@@ -46,11 +46,23 @@ Public Class LoginPage
         If password_tb.Text = "" Then
             password_tb.Text = "Password"
             password_tb.PasswordChar = ""
+
+            'also hide the error label
+            erreur_l.Visible = False
         End If
     End Sub
     'Login button click
     Private Sub login_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles login_btn.Click
+        Login()
+    End Sub
 
+    Private Sub password_tb_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles password_tb.KeyPress
+        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
+            Login()
+        End If
+    End Sub
+
+    Sub Login()
         If Connection.State = ConnectionState.Closed Then
             Connection.Open()
         End If
@@ -61,17 +73,15 @@ Public Class LoginPage
         Dim count = Convert.ToInt32(cmd.ExecuteScalar())
 
         If count > 0 Then
-            MsgBox("Login succeeded", MsgBoxStyle.Information)
-
             'show and set same location as loginpage
-            Home.Show()
-            Home.Location = Me.Location
+            AdminPage.Show()
+            AdminPage.Location = Me.Location
 
             'hide loginpage
             Me.Hide()
 
         Else
-            MsgBox("Username or Password is incorrect", MsgBoxStyle.Critical)
+            erreur_l.Visible = True
         End If
     End Sub
 End Class
