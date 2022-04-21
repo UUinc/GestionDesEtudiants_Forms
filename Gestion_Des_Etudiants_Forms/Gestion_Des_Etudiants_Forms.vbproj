@@ -207,6 +207,7 @@
     <Content Include="GestionDesEtudiants_DB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\BG_Admin.png" />
     <None Include="Resources\view-user.png" />
     <None Include="Resources\delete-user.png" />
     <None Include="Resources\edit-user.png" />

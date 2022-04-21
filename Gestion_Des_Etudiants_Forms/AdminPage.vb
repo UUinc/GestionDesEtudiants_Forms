@@ -4,6 +4,7 @@
         'wipe information from text box
         LoginPage.username_tb.Text = "Username"
         LoginPage.password_tb.Text = ""
+        LoginPage.erreur_l.Visible = False
 
         'show and set same location as admin page
         LoginPage.Show()
