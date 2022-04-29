@@ -6,11 +6,15 @@
         LoginPage.username_tb.ForeColor = Color.Gray
         LoginPage.password_tb.Text = ""
         LoginPage.password_tb.ForeColor = Color.Gray
+        LoginPage.showpassword_btn.Visible = False
         LoginPage.erreur_l.Visible = False
 
         'show and set same location as admin page
         LoginPage.Show()
         LoginPage.Location = Me.Location
+
+        'change tab index
+        LoginPage.username_tb.Select()
 
         'hide loginpage
         Me.Hide()
