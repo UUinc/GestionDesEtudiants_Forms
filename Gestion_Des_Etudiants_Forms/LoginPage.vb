@@ -72,9 +72,9 @@ Public Class LoginPage
             Connection.Open()
         End If
 
-        Dim cmd As New OleDbCommand("select count(*) from login where username=? and password=?", Connection)
-        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = username_tb.Text
-        cmd.Parameters.AddWithValue("@2", OleDbType.VarChar).Value = password_tb.Text
+        Dim cmd As New OleDbCommand("select count(*) from Login where username= @username and passwrd= @password", Connection)
+        cmd.Parameters.AddWithValue("@username", OleDbType.VarChar).Value = username_tb.Text
+        cmd.Parameters.AddWithValue("@password", OleDbType.VarChar).Value = password_tb.Text
         Dim count = Convert.ToInt32(cmd.ExecuteScalar())
 
         If count > 0 Then

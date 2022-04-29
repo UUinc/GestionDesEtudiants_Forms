@@ -103,9 +103,19 @@ Public Class AjouterPage
             cmd3.Parameters.AddWithValue("@nom", nom_tb.Text)
             cmd3.Parameters.AddWithValue("@prenom", prenom_tb.Text)
             cmd3.Parameters.Add("@date_de_naissance", OleDbType.DBDate).Value = DateValue(birthdate_picker.Value.ToString())
-            cmd3.Parameters.AddWithValue("@sex", True)
+            cmd3.Parameters.AddWithValue("@sex", GetSex())
             cmd3.Parameters.AddWithValue("@student_id", cmd_result)
             cmd3.ExecuteNonQuery()
+
+            'Fill user information
+            sqlQry = "INSERT INTO Login(username, passwrd, email, permission, cin) VALUES(@username, @psswrd, @email, @permission, @cin)"
+            Dim cmd4 As New OleDbCommand(sqlQry, Connection)
+            cmd4.Parameters.AddWithValue("@username", email_tb.Text)
+            cmd4.Parameters.AddWithValue("@psswrd", email_tb.Text)
+            cmd4.Parameters.AddWithValue("@email", email_tb.Text)
+            cmd4.Parameters.AddWithValue("@permission", False)
+            cmd4.Parameters.AddWithValue("@cin", cin_tb.Text)
+            cmd4.ExecuteNonQuery()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Erreur")
         End Try   
@@ -352,5 +362,12 @@ Public Class AjouterPage
             Return False
         End If
         Return True
+    End Function
+    Function GetSex() As Boolean
+        If sex_cb.Text = "Male" Then
+            Return True
+        Else
+            Return False
+        End If
     End Function
 End Class
