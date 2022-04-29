@@ -32,6 +32,7 @@ Partial Class LoginPage
         Me.password_bg = New System.Windows.Forms.PictureBox()
         Me.login_btn = New System.Windows.Forms.Button()
         Me.erreur_l = New System.Windows.Forms.Label()
+        Me.showpassword_btn = New System.Windows.Forms.Button()
         CType(Me.usericon_pic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.username_bg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.username_pic, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,7 +56,7 @@ Partial Class LoginPage
         'usericon_pic
         '
         Me.usericon_pic.BackColor = System.Drawing.Color.Transparent
-        Me.usericon_pic.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.usericon2
+        Me.usericon_pic.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.usericon2
         Me.usericon_pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.usericon_pic.Location = New System.Drawing.Point(296, 98)
         Me.usericon_pic.Name = "usericon_pic"
@@ -66,7 +67,7 @@ Partial Class LoginPage
         'username_bg
         '
         Me.username_bg.BackColor = System.Drawing.Color.Transparent
-        Me.username_bg.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.square2_BG
+        Me.username_bg.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.square2_BG
         Me.username_bg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.username_bg.Location = New System.Drawing.Point(187, 251)
         Me.username_bg.Name = "username_bg"
@@ -89,7 +90,7 @@ Partial Class LoginPage
         'username_pic
         '
         Me.username_pic.BackColor = System.Drawing.Color.White
-        Me.username_pic.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.user
+        Me.username_pic.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.user
         Me.username_pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.username_pic.Location = New System.Drawing.Point(200, 266)
         Me.username_pic.Name = "username_pic"
@@ -100,7 +101,7 @@ Partial Class LoginPage
         'password_pic
         '
         Me.password_pic.BackColor = System.Drawing.Color.White
-        Me.password_pic.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.padlock
+        Me.password_pic.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.padlock
         Me.password_pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.password_pic.Location = New System.Drawing.Point(200, 354)
         Me.password_pic.Name = "password_pic"
@@ -124,7 +125,7 @@ Partial Class LoginPage
         'password_bg
         '
         Me.password_bg.BackColor = System.Drawing.Color.Transparent
-        Me.password_bg.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.square2_BG
+        Me.password_bg.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.square2_BG
         Me.password_bg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.password_bg.Location = New System.Drawing.Point(187, 339)
         Me.password_bg.Name = "password_bg"
@@ -135,7 +136,7 @@ Partial Class LoginPage
         'login_btn
         '
         Me.login_btn.BackColor = System.Drawing.Color.Transparent
-        Me.login_btn.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.Button
+        Me.login_btn.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.Button
         Me.login_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.login_btn.FlatAppearance.BorderSize = 0
         Me.login_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
@@ -164,13 +165,30 @@ Partial Class LoginPage
         Me.erreur_l.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.erreur_l.Visible = False
         '
+        'showpassword_btn
+        '
+        Me.showpassword_btn.BackColor = System.Drawing.Color.White
+        Me.showpassword_btn.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.blind
+        Me.showpassword_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.showpassword_btn.FlatAppearance.BorderSize = 0
+        Me.showpassword_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.showpassword_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.showpassword_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.showpassword_btn.Location = New System.Drawing.Point(476, 356)
+        Me.showpassword_btn.Name = "showpassword_btn"
+        Me.showpassword_btn.Size = New System.Drawing.Size(25, 25)
+        Me.showpassword_btn.TabIndex = 12
+        Me.showpassword_btn.UseVisualStyleBackColor = False
+        Me.showpassword_btn.Visible = False
+        '
         'LoginPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.BG21
+        Me.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.BG21
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(694, 671)
+        Me.Controls.Add(Me.showpassword_btn)
         Me.Controls.Add(Me.erreur_l)
         Me.Controls.Add(Me.login_btn)
         Me.Controls.Add(Me.password_pic)
@@ -206,5 +224,6 @@ Partial Class LoginPage
     Friend WithEvents password_bg As System.Windows.Forms.PictureBox
     Friend WithEvents login_btn As System.Windows.Forms.Button
     Friend WithEvents erreur_l As System.Windows.Forms.Label
+    Friend WithEvents showpassword_btn As System.Windows.Forms.Button
 
 End Class

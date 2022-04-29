@@ -57,8 +57,9 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\GestionDesEtudiants"& _ 
-            "_DB.accdb;Persist Security Info=True;Jet OLEDB:Database Password=admin")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\Desktop\EMSI\2AP\S4\2.V"& _ 
+            "isual_Basic\Gestion_Des_Etudiants_Forms\GestionDesEtudiants_Forms\Gestion_Des_Et"& _ 
+            "udiants_Forms\GestionDesEtudiants_DB.accdb")>  _
         Public ReadOnly Property GestionDesEtudiants_DBConnectionString() As String
             Get
                 Return CType(Me("GestionDesEtudiants_DBConnectionString"),String)
@@ -75,9 +76,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.WindowsApplication1.My.MySettings
+        Friend ReadOnly Property Settings() As Global.GestionDesEtudiants.My.MySettings
             Get
-                Return Global.WindowsApplication1.My.MySettings.Default
+                Return Global.GestionDesEtudiants.My.MySettings.Default
             End Get
         End Property
     End Module

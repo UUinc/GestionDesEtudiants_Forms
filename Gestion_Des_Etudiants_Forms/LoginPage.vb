@@ -2,10 +2,10 @@
 
 Public Class LoginPage
     'database connection
-    Dim Connection As New OleDbConnection(My.Settings.GestionDesEtudiants_DBConnectionString)
+    Public Connection As New OleDbConnection(My.Settings.GestionDesEtudiants_DBConnectionString)
 
     'mouse hover the login button
-    Private Sub login_btn_MouseHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles login_btn.MouseHover
+    Private Sub login_btn_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles login_btn.MouseEnter
         login_btn.BackgroundImage = My.Resources.Button_hover
     End Sub
 
@@ -26,27 +26,32 @@ Public Class LoginPage
     Private Sub username_tb_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles username_tb.Enter
         If username_tb.Text = "Username" Then
             username_tb.Text = ""
+            username_tb.ForeColor = Color.Black
         End If
     End Sub
 
     Private Sub username_tb_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles username_tb.Leave
         If username_tb.Text = "" Then
             username_tb.Text = "Username"
+            username_tb.ForeColor = Color.Gray
         End If
     End Sub
     'password textbox placeholder
     Private Sub password_tb_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles password_tb.Enter
         If password_tb.Text = "Password" Then
             password_tb.Text = ""
+            showpassword_btn.Visible = True
             password_tb.PasswordChar = "•"
+            password_tb.ForeColor = Color.Black
         End If
     End Sub
 
     Private Sub password_tb_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles password_tb.Leave
         If password_tb.Text = "" Then
             password_tb.Text = "Password"
+            showpassword_btn.Visible = False
             password_tb.PasswordChar = ""
-
+            password_tb.ForeColor = Color.Gray
             'also hide the error label
             erreur_l.Visible = False
         End If
@@ -82,6 +87,18 @@ Public Class LoginPage
 
         Else
             erreur_l.Visible = True
+        End If
+    End Sub
+
+    Private Sub showpassword_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles showpassword_btn.Click
+        If password_tb.PasswordChar = "•"c Then
+            password_tb.PasswordChar = ""
+            'show img
+            showpassword_btn.BackgroundImage = My.Resources.show
+        Else
+            password_tb.PasswordChar = "•"c
+            'hide img
+            showpassword_btn.BackgroundImage = My.Resources.blind
         End If
     End Sub
 End Class

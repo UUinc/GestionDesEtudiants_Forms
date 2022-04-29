@@ -92,7 +92,7 @@ Partial Class AdminPage
         'Ajouter_btn
         '
         Me.Ajouter_btn.BackColor = System.Drawing.Color.Transparent
-        Me.Ajouter_btn.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.add_user2
+        Me.Ajouter_btn.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.add_user
         Me.Ajouter_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Ajouter_btn.FlatAppearance.BorderSize = 0
         Me.Ajouter_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
@@ -107,7 +107,7 @@ Partial Class AdminPage
         'modifier_btn
         '
         Me.modifier_btn.BackColor = System.Drawing.Color.Transparent
-        Me.modifier_btn.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.edit_user
+        Me.modifier_btn.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.edit_user
         Me.modifier_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.modifier_btn.FlatAppearance.BorderSize = 0
         Me.modifier_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
@@ -122,7 +122,7 @@ Partial Class AdminPage
         'Supprimer_btn
         '
         Me.Supprimer_btn.BackColor = System.Drawing.Color.Transparent
-        Me.Supprimer_btn.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.delete_user
+        Me.Supprimer_btn.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.delete_user
         Me.Supprimer_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Supprimer_btn.FlatAppearance.BorderSize = 0
         Me.Supprimer_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
@@ -137,7 +137,7 @@ Partial Class AdminPage
         'Afficher_btn
         '
         Me.Afficher_btn.BackColor = System.Drawing.Color.Transparent
-        Me.Afficher_btn.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.view_user
+        Me.Afficher_btn.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.view_user
         Me.Afficher_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Afficher_btn.FlatAppearance.BorderSize = 0
         Me.Afficher_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
@@ -165,7 +165,7 @@ Partial Class AdminPage
         'logout_btn
         '
         Me.logout_btn.BackColor = System.Drawing.Color.Transparent
-        Me.logout_btn.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.log_out
+        Me.logout_btn.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.log_out
         Me.logout_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.logout_btn.FlatAppearance.BorderSize = 0
         Me.logout_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
@@ -206,7 +206,7 @@ Partial Class AdminPage
         'homeIcon_img
         '
         Me.homeIcon_img.BackColor = System.Drawing.Color.Transparent
-        Me.homeIcon_img.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.adminpng
+        Me.homeIcon_img.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.adminpng
         Me.homeIcon_img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.homeIcon_img.FlatAppearance.BorderSize = 0
         Me.homeIcon_img.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
@@ -222,7 +222,7 @@ Partial Class AdminPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.BG_Admin
+        Me.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.BG_Admin
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(694, 671)
         Me.Controls.Add(Me.homeIcon_img)
