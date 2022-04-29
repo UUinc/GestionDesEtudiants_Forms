@@ -85,27 +85,30 @@ Public Class AjouterPage
             Connection.Open()
         End If
 
-        'Fill student information
-        Dim sqlQry As String = "INSERT INTO Student(filiere) VALUES(@filiere)"
-        Dim cmd As New OleDbCommand(sqlQry, Connection)
-        cmd.Parameters.AddWithValue("@filiere", filiere_cb.Text)
-        cmd.ExecuteNonQuery()
+        Try
+            'Fill student information
+            Dim sqlQry As String = "INSERT INTO Student(filiere) VALUES(@filiere)"
+            Dim cmd As New OleDbCommand(sqlQry, Connection)
+            cmd.Parameters.AddWithValue("@filiere", filiere_cb.Text)
+            cmd.ExecuteNonQuery()
 
-        sqlQry = "SELECT @@IDENTITY"
-        Dim cmd2 As New OleDbCommand(sqlQry, Connection)
-        Dim cmd_result As Integer = CInt(cmd2.ExecuteScalar())
+            sqlQry = "SELECT @@IDENTITY"
+            Dim cmd2 As New OleDbCommand(sqlQry, Connection)
+            Dim cmd_result As Long = CInt(cmd2.ExecuteScalar())
 
-        'Fill person information
-        sqlQry = "INSERT INTO Person() VALUES(@cin, @nom, @prenom, @date_de_naissance, @sex, @student_id)"
-        Dim cmd3 As New OleDbCommand(sqlQry, Connection)
-        cmd3.Parameters.AddWithValue("@cin", cin_tb.Text)
-        cmd3.Parameters.AddWithValue("@nom", nom_tb.Text)
-        cmd3.Parameters.AddWithValue("@prenom", prenom_tb.Text)
-        cmd3.Parameters.Add("@date_de_naissance", OleDbType.Date).Value = birthdate_picker.Value
-        cmd3.Parameters.Add("@sex", OleDbType.Boolean).Value = True
-        cmd3.Parameters.AddWithValue("@student_id", cmd_result)
-        cmd3.ExecuteNonQuery()
-
+            'Fill person information
+            sqlQry = "INSERT INTO Person(cin, nom, prenom, date_de_naissance, sex, student_id) VALUES(@cin, @nom, @prenom, @date_de_naissance, @sex, @student_id)"
+            Dim cmd3 As New OleDbCommand(sqlQry, Connection)
+            cmd3.Parameters.AddWithValue("@cin", cin_tb.Text)
+            cmd3.Parameters.AddWithValue("@nom", nom_tb.Text)
+            cmd3.Parameters.AddWithValue("@prenom", prenom_tb.Text)
+            cmd3.Parameters.Add("@date_de_naissance", OleDbType.DBDate).Value = DateValue(birthdate_picker.Value.ToString())
+            cmd3.Parameters.AddWithValue("@sex", True)
+            cmd3.Parameters.AddWithValue("@student_id", cmd_result)
+            cmd3.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Erreur")
+        End Try   
     End Sub
     'sauvgarder les donnees
     Private Sub save_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles save_btn.Click
@@ -160,14 +163,18 @@ Public Class AjouterPage
     End Function
 
     Private Function CheckCINInput() As Boolean
-        If Not Char.IsLetter(cin_tb.Text(0)) Then
+        Try
+            If Not Char.IsLetter(cin_tb.Text(0)) Then
+                Return False
+            ElseIf Not Char.IsLetterOrDigit(cin_tb.Text(1)) Then
+                Return False
+            ElseIf Not IsNumeric(cin_tb.Text.Remove(0, 2)) Then
+                Return False
+            End If
+            Return True
+        Catch ex As Exception
             Return False
-        ElseIf Not Char.IsLetterOrDigit(cin_tb.Text(1)) Then
-            Return False
-        ElseIf Not IsNumeric(cin_tb.Text.Remove(0, 2)) Then
-            Return False
-        End If
-        Return True
+        End Try
     End Function
 
     Private Function CheckNomInput() As Boolean
