@@ -78,6 +78,7 @@ Partial Class ModifierPage
         Me.email_l = New System.Windows.Forms.Label()
         Me.sexe_l = New System.Windows.Forms.Label()
         Me.filiere_l = New System.Windows.Forms.Label()
+        Me.edite_l = New System.Windows.Forms.Label()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -762,6 +763,21 @@ Partial Class ModifierPage
         Me.filiere_l.TabIndex = 115
         Me.filiere_l.Text = "Filiere"
         '
+        'edite_l
+        '
+        Me.edite_l.AutoSize = True
+        Me.edite_l.BackColor = System.Drawing.Color.Transparent
+        Me.edite_l.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.edite_l.Font = New System.Drawing.Font("Roboto Lt", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.edite_l.ForeColor = System.Drawing.Color.LawnGreen
+        Me.edite_l.Location = New System.Drawing.Point(325, 573)
+        Me.edite_l.Name = "edite_l"
+        Me.edite_l.Size = New System.Drawing.Size(51, 23)
+        Me.edite_l.TabIndex = 116
+        Me.edite_l.Text = "édité"
+        Me.edite_l.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.edite_l.Visible = False
+        '
         'ModifierPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -769,6 +785,7 @@ Partial Class ModifierPage
         Me.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.BG2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(694, 671)
+        Me.Controls.Add(Me.edite_l)
         Me.Controls.Add(Me.filiere_l)
         Me.Controls.Add(Me.sexe_l)
         Me.Controls.Add(Me.email_l)
@@ -907,4 +924,5 @@ Partial Class ModifierPage
     Friend WithEvents email_l As System.Windows.Forms.Label
     Friend WithEvents sexe_l As System.Windows.Forms.Label
     Friend WithEvents filiere_l As System.Windows.Forms.Label
+    Friend WithEvents edite_l As System.Windows.Forms.Label
 End Class

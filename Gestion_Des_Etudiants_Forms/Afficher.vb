@@ -3,7 +3,10 @@
 Public Class AfficherPage
 
     Private Sub back_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles back_btn.Click
+        BackToLoginPage()
+    End Sub
 
+    Sub BackToLoginPage()
         'wipe information from text box
         LoginPage.username_tb.Text = "Username"
         LoginPage.username_tb.ForeColor = Color.Gray
@@ -146,7 +149,7 @@ Public Class AfficherPage
             note7_tb.Text = note7
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Erreur")
+            BackToLoginPage()
         End Try
     End Sub
 End Class

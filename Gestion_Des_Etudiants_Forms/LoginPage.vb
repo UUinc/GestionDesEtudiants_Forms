@@ -116,4 +116,12 @@ Public Class LoginPage
             showpassword_btn.BackgroundImage = My.Resources.blind
         End If
     End Sub
+
+    Private Sub username_tb_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles username_tb.TextChanged
+        erreur_l.Visible = False
+    End Sub
+
+    Private Sub password_tb_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles password_tb.TextChanged
+        erreur_l.Visible = False
+    End Sub
 End Class

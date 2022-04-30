@@ -31,6 +31,7 @@ Partial Class SupprimerPage
         Me.erreur_l = New System.Windows.Forms.Label()
         Me.supprimer_btn = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.supprimer_l = New System.Windows.Forms.Label()
         CType(Me.etudiant_img, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cin_bg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -152,6 +153,21 @@ Partial Class SupprimerPage
         Me.Label1.TabIndex = 63
         Me.Label1.Text = "Etudiant CIN"
         '
+        'supprimer_l
+        '
+        Me.supprimer_l.AutoSize = True
+        Me.supprimer_l.BackColor = System.Drawing.Color.Transparent
+        Me.supprimer_l.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.supprimer_l.Font = New System.Drawing.Font("Roboto Lt", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.supprimer_l.ForeColor = System.Drawing.Color.LawnGreen
+        Me.supprimer_l.Location = New System.Drawing.Point(291, 309)
+        Me.supprimer_l.Name = "supprimer_l"
+        Me.supprimer_l.Size = New System.Drawing.Size(90, 23)
+        Me.supprimer_l.TabIndex = 64
+        Me.supprimer_l.Text = "supprimé"
+        Me.supprimer_l.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.supprimer_l.Visible = False
+        '
         'SupprimerPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -159,6 +175,7 @@ Partial Class SupprimerPage
         Me.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.BG2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(694, 671)
+        Me.Controls.Add(Me.supprimer_l)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.erreur_l)
         Me.Controls.Add(Me.supprimer_btn)
@@ -188,4 +205,5 @@ Partial Class SupprimerPage
     Friend WithEvents erreur_l As System.Windows.Forms.Label
     Friend WithEvents supprimer_btn As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents supprimer_l As System.Windows.Forms.Label
 End Class

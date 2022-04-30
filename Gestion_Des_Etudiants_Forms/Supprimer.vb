@@ -5,6 +5,7 @@ Public Class SupprimerPage
     Private Sub back_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles back_btn.Click
         cin_tb.Text = ""
         erreur_l.Visible = False
+        supprimer_l.Visible = False
 
         AdminPage.Show()
         AdminPage.Location = Me.Location
@@ -27,6 +28,7 @@ Public Class SupprimerPage
 
             If vbEmpty = cmd.ExecuteScalar() Then
                 erreur_l.Visible = True
+                supprimer_l.Visible = False
                 Return
             End If
 
@@ -38,13 +40,15 @@ Public Class SupprimerPage
             cmd2.Parameters.AddWithValue("@student_id", student_id)
             cmd2.ExecuteNonQuery()
 
-            MessageBox.Show("Deleted")
+            supprimer_l.Visible = True
+            erreur_l.Visible = False
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Erreur")
+            'MessageBox.Show(ex.Message, "Erreur")
         End Try
     End Sub
 
     Private Sub cin_tb_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cin_tb.TextChanged
         erreur_l.Visible = False
+        supprimer_l.Visible = False
     End Sub
 End Class

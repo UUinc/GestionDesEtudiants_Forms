@@ -71,6 +71,8 @@ Partial Class AjouterPage
         Me.prenom_l = New System.Windows.Forms.Label()
         Me.nom_l = New System.Windows.Forms.Label()
         Me.cin_l = New System.Windows.Forms.Label()
+        Me.erreur_exception_l = New System.Windows.Forms.Label()
+        Me.enregister_l = New System.Windows.Forms.Label()
         CType(Me.cin_bg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.name_bg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.birthdate_bg, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -668,6 +670,35 @@ Partial Class AjouterPage
         Me.cin_l.TabIndex = 116
         Me.cin_l.Text = "CIN"
         '
+        'erreur_exception_l
+        '
+        Me.erreur_exception_l.AutoSize = True
+        Me.erreur_exception_l.BackColor = System.Drawing.Color.Transparent
+        Me.erreur_exception_l.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.erreur_exception_l.Font = New System.Drawing.Font("Roboto Lt", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.erreur_exception_l.ForeColor = System.Drawing.Color.Crimson
+        Me.erreur_exception_l.Location = New System.Drawing.Point(147, 17)
+        Me.erreur_exception_l.Name = "erreur_exception_l"
+        Me.erreur_exception_l.Size = New System.Drawing.Size(0, 14)
+        Me.erreur_exception_l.TabIndex = 122
+        Me.erreur_exception_l.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.erreur_exception_l.Visible = False
+        '
+        'enregister_l
+        '
+        Me.enregister_l.AutoSize = True
+        Me.enregister_l.BackColor = System.Drawing.Color.Transparent
+        Me.enregister_l.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.enregister_l.Font = New System.Drawing.Font("Roboto Lt", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.enregister_l.ForeColor = System.Drawing.Color.LawnGreen
+        Me.enregister_l.Location = New System.Drawing.Point(303, 572)
+        Me.enregister_l.Name = "enregister_l"
+        Me.enregister_l.Size = New System.Drawing.Size(94, 23)
+        Me.enregister_l.TabIndex = 123
+        Me.enregister_l.Text = "enregistré"
+        Me.enregister_l.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.enregister_l.Visible = False
+        '
         'AjouterPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -675,6 +706,8 @@ Partial Class AjouterPage
         Me.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.BG2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(694, 671)
+        Me.Controls.Add(Me.enregister_l)
+        Me.Controls.Add(Me.erreur_exception_l)
         Me.Controls.Add(Me.filiere_l)
         Me.Controls.Add(Me.sexe_l)
         Me.Controls.Add(Me.email_l)
@@ -799,4 +832,6 @@ Partial Class AjouterPage
     Friend WithEvents prenom_l As System.Windows.Forms.Label
     Friend WithEvents nom_l As System.Windows.Forms.Label
     Friend WithEvents cin_l As System.Windows.Forms.Label
+    Friend WithEvents erreur_exception_l As System.Windows.Forms.Label
+    Friend WithEvents enregister_l As System.Windows.Forms.Label
 End Class

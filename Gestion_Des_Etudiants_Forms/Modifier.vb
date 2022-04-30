@@ -31,6 +31,8 @@ Public Class ModifierPage
 
             If count <= 0 Then
                 erreur_cinNotFound_l.Visible = True
+                edite_l.Visible = False
+                erreur_l.Visible = False
                 Return
             End If
 
@@ -137,12 +139,14 @@ Public Class ModifierPage
             note7_tb.Text = note7
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Erreur")
+            'MessageBox.Show(ex.Message, "Erreur")
         End Try
     End Sub
 
     Private Sub etudiantCIN_search_tb_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles etudiantCIN_search_tb.TextChanged
         erreur_cinNotFound_l.Visible = False
+        edite_l.Visible = False
+        erreur_l.Visible = False
     End Sub
 
     'Repated Code
@@ -224,7 +228,7 @@ Public Class ModifierPage
             cmd5.Parameters.AddWithValue("@student_id", student_id)
             cmd5.ExecuteNonQuery()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Erreur")
+            'MessageBox.Show(ex.Message, "Erreur")
         End Try
     End Sub
     'sauvgarder les donnees
@@ -232,11 +236,15 @@ Public Class ModifierPage
         erreur_l.Visible = CheckInputs()
 
         If CheckInputs() Then
+            edite_l.Visible = False
+            erreur_cinNotFound_l.Visible = False
             Return
         End If
 
         Edit()
-        MessageBox.Show("edited")
+        edite_l.Visible = True
+        erreur_cinNotFound_l.Visible = False
+        erreur_l.Visible = False
     End Sub
 
     Private Function CheckInputs() As Boolean
@@ -244,33 +252,45 @@ Public Class ModifierPage
 
         'CIN
         If Not CheckCINInput() Then
-            cin_tb.ForeColor = Color.Red
+            cin_l.ForeColor = Color.Red
             IsError = True
+        Else
+            cin_l.ForeColor = Color.Gray
         End If
         'Nom
         If Not CheckNomInput() Then
-            nom_tb.ForeColor = Color.Red
+            nom_l.ForeColor = Color.Red
             IsError = True
+        Else
+            nom_l.ForeColor = Color.Gray
         End If
         'Prenom
         If Not CheckPrenomInput() Then
-            prenom_tb.ForeColor = Color.Red
+            prenom_l.ForeColor = Color.Red
             IsError = True
+        Else
+            prenom_l.ForeColor = Color.Gray
         End If
         'Email
         If Not CheckEmailInput() Then
-            email_tb.ForeColor = Color.Red
+            email_l.ForeColor = Color.Red
             IsError = True
+        Else
+            email_l.ForeColor = Color.Gray
         End If
         'Sex
         If Not CheckSexInput() Then
-            Sex_placeholder.ForeColor = Color.Red
+            sexe_l.ForeColor = Color.Red
             IsError = True
+        Else
+            sexe_l.ForeColor = Color.Gray
         End If
         'Filiere
         If Not CheckFiliereInput() Then
-            filiere_placeholder.ForeColor = Color.Red
+            filiere_l.ForeColor = Color.Red
             IsError = True
+        Else
+            filiere_l.ForeColor = Color.Gray
         End If
         'Notes
         If Not CheckNotesInput() Then
@@ -499,5 +519,6 @@ Public Class ModifierPage
         note7_tb.Text = ""
 
         erreur_l.Visible = False
+        edite_l.Visible = False
     End Sub
 End Class

@@ -96,7 +96,11 @@ Public Class AjouterPage
             cmd5.ExecuteNonQuery()
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Erreur")
+            erreur_exception_l.Text = ex.Message
+            erreur_exception_l.Visible = True
+
+            enregister_l.Visible = False
+            erreur_l.Visible = False
         End Try
     End Sub
     'sauvgarder les donnees
@@ -104,11 +108,15 @@ Public Class AjouterPage
         erreur_l.Visible = CheckInputs()
         
         If CheckInputs() Then
+            enregister_l.Visible = False
+            erreur_exception_l.Visible = False
             Return
         End If
 
         Save()
-        MessageBox.Show("saved")
+        enregister_l.Visible = True
+        erreur_l.Visible = False
+        erreur_exception_l.Visible = False
     End Sub
 
     Private Function CheckInputs() As Boolean
@@ -116,33 +124,45 @@ Public Class AjouterPage
 
         'CIN
         If Not CheckCINInput() Then
-            cin_tb.ForeColor = Color.Red
+            cin_l.ForeColor = Color.Red
             IsError = True
+        Else
+            cin_l.ForeColor = Color.Gray
         End If
         'Nom
         If Not CheckNomInput() Then
-            nom_tb.ForeColor = Color.Red
+            nom_l.ForeColor = Color.Red
             IsError = True
+        Else
+            nom_l.ForeColor = Color.Gray
         End If
         'Prenom
         If Not CheckPrenomInput() Then
-            prenom_tb.ForeColor = Color.Red
+            prenom_l.ForeColor = Color.Red
             IsError = True
+        Else
+            prenom_l.ForeColor = Color.Gray
         End If
         'Email
         If Not CheckEmailInput() Then
-            email_tb.ForeColor = Color.Red
+            email_l.ForeColor = Color.Red
             IsError = True
+        Else
+            email_l.ForeColor = Color.Gray
         End If
         'Sex
         If Not CheckSexInput() Then
-            sex_cb.ForeColor = Color.Red
+            sexe_l.ForeColor = Color.Red
             IsError = True
+        Else
+            sexe_l.ForeColor = Color.Gray
         End If
         'Filiere
         If Not CheckFiliereInput() Then
-            filiere_cb.ForeColor = Color.Red
+            filiere_l.ForeColor = Color.Red
             IsError = True
+        Else
+            filiere_l.ForeColor = Color.Gray
         End If
         'Notes
         If Not CheckNotesInput() Then
@@ -368,5 +388,7 @@ Public Class AjouterPage
         note7_tb.Text = ""
 
         erreur_l.Visible = False
+        erreur_exception_l.Visible = False
+        enregister_l.Visible = False
     End Sub
 End Class
