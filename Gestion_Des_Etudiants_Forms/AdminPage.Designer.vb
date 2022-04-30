@@ -25,11 +25,9 @@ Partial Class AdminPage
         Me.ajouter_l = New System.Windows.Forms.Label()
         Me.modifier_l = New System.Windows.Forms.Label()
         Me.supprimer_l = New System.Windows.Forms.Label()
-        Me.afficher_l = New System.Windows.Forms.Label()
         Me.Ajouter_btn = New System.Windows.Forms.Button()
         Me.modifier_btn = New System.Windows.Forms.Button()
         Me.Supprimer_btn = New System.Windows.Forms.Button()
-        Me.Afficher_btn = New System.Windows.Forms.Button()
         Me.AdminPageTitle_l = New System.Windows.Forms.Label()
         Me.logout_btn = New System.Windows.Forms.Button()
         Me.logout_l = New System.Windows.Forms.Label()
@@ -44,7 +42,7 @@ Partial Class AdminPage
         Me.ajouter_l.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ajouter_l.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ajouter_l.ForeColor = System.Drawing.Color.White
-        Me.ajouter_l.Location = New System.Drawing.Point(33, 402)
+        Me.ajouter_l.Location = New System.Drawing.Point(78, 402)
         Me.ajouter_l.Name = "ajouter_l"
         Me.ajouter_l.Size = New System.Drawing.Size(120, 39)
         Me.ajouter_l.TabIndex = 1
@@ -57,7 +55,7 @@ Partial Class AdminPage
         Me.modifier_l.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.modifier_l.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.modifier_l.ForeColor = System.Drawing.Color.White
-        Me.modifier_l.Location = New System.Drawing.Point(198, 402)
+        Me.modifier_l.Location = New System.Drawing.Point(280, 402)
         Me.modifier_l.Name = "modifier_l"
         Me.modifier_l.Size = New System.Drawing.Size(136, 39)
         Me.modifier_l.TabIndex = 2
@@ -70,24 +68,11 @@ Partial Class AdminPage
         Me.supprimer_l.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.supprimer_l.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.supprimer_l.ForeColor = System.Drawing.Color.White
-        Me.supprimer_l.Location = New System.Drawing.Point(357, 402)
+        Me.supprimer_l.Location = New System.Drawing.Point(476, 402)
         Me.supprimer_l.Name = "supprimer_l"
         Me.supprimer_l.Size = New System.Drawing.Size(165, 39)
         Me.supprimer_l.TabIndex = 3
         Me.supprimer_l.Text = "Supprimer"
-        '
-        'afficher_l
-        '
-        Me.afficher_l.AutoSize = True
-        Me.afficher_l.BackColor = System.Drawing.Color.Transparent
-        Me.afficher_l.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.afficher_l.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.afficher_l.ForeColor = System.Drawing.Color.White
-        Me.afficher_l.Location = New System.Drawing.Point(546, 402)
-        Me.afficher_l.Name = "afficher_l"
-        Me.afficher_l.Size = New System.Drawing.Size(131, 39)
-        Me.afficher_l.TabIndex = 4
-        Me.afficher_l.Text = "Afficher"
         '
         'Ajouter_btn
         '
@@ -98,7 +83,7 @@ Partial Class AdminPage
         Me.Ajouter_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Ajouter_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Ajouter_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Ajouter_btn.Location = New System.Drawing.Point(15, 239)
+        Me.Ajouter_btn.Location = New System.Drawing.Point(60, 239)
         Me.Ajouter_btn.Name = "Ajouter_btn"
         Me.Ajouter_btn.Size = New System.Drawing.Size(150, 150)
         Me.Ajouter_btn.TabIndex = 9
@@ -113,7 +98,7 @@ Partial Class AdminPage
         Me.modifier_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.modifier_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.modifier_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.modifier_btn.Location = New System.Drawing.Point(187, 239)
+        Me.modifier_btn.Location = New System.Drawing.Point(269, 239)
         Me.modifier_btn.Name = "modifier_btn"
         Me.modifier_btn.Size = New System.Drawing.Size(150, 150)
         Me.modifier_btn.TabIndex = 10
@@ -128,26 +113,11 @@ Partial Class AdminPage
         Me.Supprimer_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Supprimer_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Supprimer_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Supprimer_btn.Location = New System.Drawing.Point(359, 239)
+        Me.Supprimer_btn.Location = New System.Drawing.Point(478, 239)
         Me.Supprimer_btn.Name = "Supprimer_btn"
         Me.Supprimer_btn.Size = New System.Drawing.Size(150, 150)
         Me.Supprimer_btn.TabIndex = 11
         Me.Supprimer_btn.UseVisualStyleBackColor = False
-        '
-        'Afficher_btn
-        '
-        Me.Afficher_btn.BackColor = System.Drawing.Color.Transparent
-        Me.Afficher_btn.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.view_user
-        Me.Afficher_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Afficher_btn.FlatAppearance.BorderSize = 0
-        Me.Afficher_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Afficher_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Afficher_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Afficher_btn.Location = New System.Drawing.Point(530, 239)
-        Me.Afficher_btn.Name = "Afficher_btn"
-        Me.Afficher_btn.Size = New System.Drawing.Size(150, 150)
-        Me.Afficher_btn.TabIndex = 12
-        Me.Afficher_btn.UseVisualStyleBackColor = False
         '
         'AdminPageTitle_l
         '
@@ -230,11 +200,9 @@ Partial Class AdminPage
         Me.Controls.Add(Me.logout_btn)
         Me.Controls.Add(Me.logout_l)
         Me.Controls.Add(Me.AdminPageTitle_l)
-        Me.Controls.Add(Me.Afficher_btn)
         Me.Controls.Add(Me.Supprimer_btn)
         Me.Controls.Add(Me.modifier_btn)
         Me.Controls.Add(Me.Ajouter_btn)
-        Me.Controls.Add(Me.afficher_l)
         Me.Controls.Add(Me.supprimer_l)
         Me.Controls.Add(Me.modifier_l)
         Me.Controls.Add(Me.ajouter_l)
@@ -251,11 +219,9 @@ Partial Class AdminPage
     Friend WithEvents ajouter_l As System.Windows.Forms.Label
     Friend WithEvents modifier_l As System.Windows.Forms.Label
     Friend WithEvents supprimer_l As System.Windows.Forms.Label
-    Friend WithEvents afficher_l As System.Windows.Forms.Label
     Friend WithEvents Ajouter_btn As System.Windows.Forms.Button
     Friend WithEvents modifier_btn As System.Windows.Forms.Button
     Friend WithEvents Supprimer_btn As System.Windows.Forms.Button
-    Friend WithEvents Afficher_btn As System.Windows.Forms.Button
     Friend WithEvents AdminPageTitle_l As System.Windows.Forms.Label
     Friend WithEvents logout_btn As System.Windows.Forms.Button
     Friend WithEvents logout_l As System.Windows.Forms.Label

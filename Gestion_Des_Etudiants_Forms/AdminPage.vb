@@ -41,7 +41,7 @@
         Me.Hide()
     End Sub
 
-    Private Sub Afficher_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Afficher_btn.Click
+    Private Sub Afficher_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         AfficherPage.Show()
         AfficherPage.Location = Me.Location
         Me.Hide()

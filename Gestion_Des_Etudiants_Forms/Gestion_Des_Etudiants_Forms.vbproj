@@ -247,6 +247,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GestionDesEtudiants_DB.accdb" />
+    <None Include="Resources\search.png" />
     <None Include="Resources\show.png" />
     <None Include="Resources\blind.png" />
     <None Include="Resources\exam.png" />

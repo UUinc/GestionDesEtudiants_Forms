@@ -67,6 +67,11 @@ Partial Class ModifierPage
         Me.birthdate_bg = New System.Windows.Forms.PictureBox()
         Me.erreur_l = New System.Windows.Forms.Label()
         Me.modifier_btn = New System.Windows.Forms.Button()
+        Me.search_btn = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.etudiantCIN_search_tb = New System.Windows.Forms.TextBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.erreur_cinNotFound_l = New System.Windows.Forms.Label()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,6 +88,7 @@ Partial Class ModifierPage
         CType(Me.name_bg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cin_bg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.birthdate_bg, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'title_l
@@ -620,6 +626,70 @@ Partial Class ModifierPage
         Me.modifier_btn.Text = "Modifier"
         Me.modifier_btn.UseVisualStyleBackColor = False
         '
+        'search_btn
+        '
+        Me.search_btn.BackColor = System.Drawing.Color.Transparent
+        Me.search_btn.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.search
+        Me.search_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.search_btn.FlatAppearance.BorderSize = 0
+        Me.search_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.search_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.search_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.search_btn.Location = New System.Drawing.Point(465, 43)
+        Me.search_btn.Name = "search_btn"
+        Me.search_btn.Size = New System.Drawing.Size(30, 30)
+        Me.search_btn.TabIndex = 105
+        Me.search_btn.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.White
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Gray
+        Me.Label1.Location = New System.Drawing.Point(253, 38)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(74, 15)
+        Me.Label1.TabIndex = 108
+        Me.Label1.Text = "Etudiant CIN"
+        '
+        'etudiantCIN_search_tb
+        '
+        Me.etudiantCIN_search_tb.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.etudiantCIN_search_tb.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.etudiantCIN_search_tb.ForeColor = System.Drawing.Color.Black
+        Me.etudiantCIN_search_tb.Location = New System.Drawing.Point(251, 53)
+        Me.etudiantCIN_search_tb.MaxLength = 20
+        Me.etudiantCIN_search_tb.Name = "etudiantCIN_search_tb"
+        Me.etudiantCIN_search_tb.Size = New System.Drawing.Size(170, 26)
+        Me.etudiantCIN_search_tb.TabIndex = 106
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox9.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.square2_BG
+        Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox9.Location = New System.Drawing.Point(223, 29)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(231, 60)
+        Me.PictureBox9.TabIndex = 107
+        Me.PictureBox9.TabStop = False
+        '
+        'erreur_cinNotFound_l
+        '
+        Me.erreur_cinNotFound_l.AutoSize = True
+        Me.erreur_cinNotFound_l.BackColor = System.Drawing.Color.Transparent
+        Me.erreur_cinNotFound_l.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.erreur_cinNotFound_l.Font = New System.Drawing.Font("Roboto Lt", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.erreur_cinNotFound_l.ForeColor = System.Drawing.Color.Crimson
+        Me.erreur_cinNotFound_l.Location = New System.Drawing.Point(216, 12)
+        Me.erreur_cinNotFound_l.Name = "erreur_cinNotFound_l"
+        Me.erreur_cinNotFound_l.Size = New System.Drawing.Size(249, 23)
+        Me.erreur_cinNotFound_l.TabIndex = 109
+        Me.erreur_cinNotFound_l.Text = "Erreur aucun étudiant trouvé"
+        Me.erreur_cinNotFound_l.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.erreur_cinNotFound_l.Visible = False
+        '
         'ModifierPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -627,6 +697,11 @@ Partial Class ModifierPage
         Me.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.BG2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(694, 671)
+        Me.Controls.Add(Me.erreur_cinNotFound_l)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.etudiantCIN_search_tb)
+        Me.Controls.Add(Me.PictureBox9)
+        Me.Controls.Add(Me.search_btn)
         Me.Controls.Add(Me.erreur_l)
         Me.Controls.Add(Me.modifier_btn)
         Me.Controls.Add(Me.note7_l)
@@ -693,6 +768,7 @@ Partial Class ModifierPage
         CType(Me.name_bg, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cin_bg, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.birthdate_bg, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -742,4 +818,9 @@ Partial Class ModifierPage
     Friend WithEvents birthdate_bg As System.Windows.Forms.PictureBox
     Friend WithEvents erreur_l As System.Windows.Forms.Label
     Friend WithEvents modifier_btn As System.Windows.Forms.Button
+    Friend WithEvents search_btn As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents etudiantCIN_search_tb As System.Windows.Forms.TextBox
+    Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
+    Friend WithEvents erreur_cinNotFound_l As System.Windows.Forms.Label
 End Class

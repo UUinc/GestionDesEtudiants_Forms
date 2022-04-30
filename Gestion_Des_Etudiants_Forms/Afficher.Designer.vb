@@ -418,7 +418,6 @@ Partial Class AfficherPage
         Me.email_tb.ReadOnly = True
         Me.email_tb.Size = New System.Drawing.Size(170, 26)
         Me.email_tb.TabIndex = 104
-        Me.email_tb.Text = "Email"
         '
         'email_bg
         '
@@ -465,7 +464,6 @@ Partial Class AfficherPage
         Me.prenom_tb.ReadOnly = True
         Me.prenom_tb.Size = New System.Drawing.Size(170, 26)
         Me.prenom_tb.TabIndex = 103
-        Me.prenom_tb.Text = "Prenom"
         '
         'prenom_bg
         '
@@ -490,7 +488,6 @@ Partial Class AfficherPage
         Me.nom_tb.ReadOnly = True
         Me.nom_tb.Size = New System.Drawing.Size(170, 26)
         Me.nom_tb.TabIndex = 102
-        Me.nom_tb.Text = "Nom"
         '
         'name_bg
         '
@@ -515,7 +512,6 @@ Partial Class AfficherPage
         Me.cin_tb.ReadOnly = True
         Me.cin_tb.Size = New System.Drawing.Size(170, 26)
         Me.cin_tb.TabIndex = 101
-        Me.cin_tb.Text = "CIN"
         '
         'cin_bg
         '
@@ -551,7 +547,6 @@ Partial Class AfficherPage
         Me.date_de_naissance_tb.ReadOnly = True
         Me.date_de_naissance_tb.Size = New System.Drawing.Size(170, 26)
         Me.date_de_naissance_tb.TabIndex = 142
-        Me.date_de_naissance_tb.Text = "Date de naissance"
         '
         'sexe_tb
         '
@@ -565,7 +560,6 @@ Partial Class AfficherPage
         Me.sexe_tb.ReadOnly = True
         Me.sexe_tb.Size = New System.Drawing.Size(170, 26)
         Me.sexe_tb.TabIndex = 143
-        Me.sexe_tb.Text = "sexe"
         '
         'filiere_tb
         '
@@ -579,7 +573,6 @@ Partial Class AfficherPage
         Me.filiere_tb.ReadOnly = True
         Me.filiere_tb.Size = New System.Drawing.Size(170, 26)
         Me.filiere_tb.TabIndex = 144
-        Me.filiere_tb.Text = "filiere"
         '
         'AfficherPage
         '
