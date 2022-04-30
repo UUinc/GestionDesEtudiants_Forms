@@ -77,14 +77,14 @@ Public Class LoginPage
             Connection.Open()
         End If
 
-        Dim cmd As New OleDbCommand("select count(*) from Login where username= @username and passwrd= @password", Connection)
+        Dim cmd As New OleDbCommand("select count(*) from Login where username= @username and StrComp(passwrd,  @password, 0) = 0", Connection)
         cmd.Parameters.AddWithValue("@username", OleDbType.VarChar).Value = username_tb.Text
         cmd.Parameters.AddWithValue("@password", OleDbType.VarChar).Value = password_tb.Text
         Dim count = Convert.ToInt32(cmd.ExecuteScalar())
 
         If count > 0 Then
 
-            Dim cmd2 As New OleDbCommand("select permission from Login where username= @username and passwrd= @password", Connection)
+            Dim cmd2 As New OleDbCommand("select permission from Login where username= @username and StrComp(passwrd,  @password, 0) = 0", Connection)
             cmd2.Parameters.AddWithValue("@username", OleDbType.VarChar).Value = username_tb.Text
             cmd2.Parameters.AddWithValue("@password", OleDbType.VarChar).Value = password_tb.Text
             permission = Convert.ToBoolean(cmd2.ExecuteScalar())

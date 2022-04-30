@@ -4,9 +4,12 @@
         'wipe information from text box
         LoginPage.username_tb.Text = "Username"
         LoginPage.username_tb.ForeColor = Color.Gray
-        LoginPage.password_tb.Text = ""
+        LoginPage.password_tb.Text = "Password"
         LoginPage.password_tb.ForeColor = Color.Gray
+        LoginPage.password_tb.PasswordChar = ""
+        LoginPage.showpassword_btn.BackgroundImage = My.Resources.blind
         LoginPage.showpassword_btn.Visible = False
+
         LoginPage.erreur_l.Visible = False
 
         'show and set same location as admin page

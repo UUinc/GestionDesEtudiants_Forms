@@ -281,9 +281,9 @@ Partial Class AjouterPage
         Me.Sex_placeholder.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Sex_placeholder.Location = New System.Drawing.Point(72, 458)
         Me.Sex_placeholder.Name = "Sex_placeholder"
-        Me.Sex_placeholder.Size = New System.Drawing.Size(125, 26)
+        Me.Sex_placeholder.Size = New System.Drawing.Size(136, 26)
         Me.Sex_placeholder.TabIndex = 25
-        Me.Sex_placeholder.Text = "Sex                "
+        Me.Sex_placeholder.Text = "Sexe                "
         '
         'email_tb
         '
