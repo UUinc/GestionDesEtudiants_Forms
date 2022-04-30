@@ -682,11 +682,11 @@ Partial Class ModifierPage
         Me.erreur_cinNotFound_l.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.erreur_cinNotFound_l.Font = New System.Drawing.Font("Roboto Lt", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.erreur_cinNotFound_l.ForeColor = System.Drawing.Color.Crimson
-        Me.erreur_cinNotFound_l.Location = New System.Drawing.Point(216, 12)
+        Me.erreur_cinNotFound_l.Location = New System.Drawing.Point(253, 12)
         Me.erreur_cinNotFound_l.Name = "erreur_cinNotFound_l"
-        Me.erreur_cinNotFound_l.Size = New System.Drawing.Size(249, 23)
+        Me.erreur_cinNotFound_l.Size = New System.Drawing.Size(172, 23)
         Me.erreur_cinNotFound_l.TabIndex = 109
-        Me.erreur_cinNotFound_l.Text = "Erreur aucun étudiant trouvé"
+        Me.erreur_cinNotFound_l.Text = "Ce CIN n'existe pas"
         Me.erreur_cinNotFound_l.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.erreur_cinNotFound_l.Visible = False
         '

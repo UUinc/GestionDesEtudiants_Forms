@@ -30,6 +30,7 @@ Partial Class SupprimerPage
         Me.cin_bg = New System.Windows.Forms.PictureBox()
         Me.erreur_l = New System.Windows.Forms.Label()
         Me.supprimer_btn = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.etudiant_img, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cin_bg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -88,13 +89,12 @@ Partial Class SupprimerPage
         '
         Me.cin_tb.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.cin_tb.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cin_tb.ForeColor = System.Drawing.Color.Gray
-        Me.cin_tb.Location = New System.Drawing.Point(253, 259)
+        Me.cin_tb.ForeColor = System.Drawing.Color.Black
+        Me.cin_tb.Location = New System.Drawing.Point(253, 264)
         Me.cin_tb.MaxLength = 64
         Me.cin_tb.Name = "cin_tb"
         Me.cin_tb.Size = New System.Drawing.Size(170, 26)
         Me.cin_tb.TabIndex = 40
-        Me.cin_tb.Text = "CIN"
         '
         'cin_bg
         '
@@ -114,11 +114,11 @@ Partial Class SupprimerPage
         Me.erreur_l.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.erreur_l.Font = New System.Drawing.Font("Roboto Lt", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.erreur_l.ForeColor = System.Drawing.Color.Crimson
-        Me.erreur_l.Location = New System.Drawing.Point(231, 308)
+        Me.erreur_l.Location = New System.Drawing.Point(255, 309)
         Me.erreur_l.Name = "erreur_l"
-        Me.erreur_l.Size = New System.Drawing.Size(224, 23)
+        Me.erreur_l.Size = New System.Drawing.Size(172, 23)
         Me.erreur_l.TabIndex = 62
-        Me.erreur_l.Text = "Erreur vérifier votre entrée"
+        Me.erreur_l.Text = "Ce CIN n'existe pas"
         Me.erreur_l.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.erreur_l.Visible = False
         '
@@ -140,6 +140,18 @@ Partial Class SupprimerPage
         Me.supprimer_btn.Text = "Supprimer"
         Me.supprimer_btn.UseVisualStyleBackColor = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.White
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Gray
+        Me.Label1.Location = New System.Drawing.Point(252, 251)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(74, 15)
+        Me.Label1.TabIndex = 63
+        Me.Label1.Text = "Etudiant CIN"
+        '
         'SupprimerPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -147,6 +159,7 @@ Partial Class SupprimerPage
         Me.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.BG2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(694, 671)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.erreur_l)
         Me.Controls.Add(Me.supprimer_btn)
         Me.Controls.Add(Me.etudiant_img)
@@ -174,4 +187,5 @@ Partial Class SupprimerPage
     Friend WithEvents cin_bg As System.Windows.Forms.PictureBox
     Friend WithEvents erreur_l As System.Windows.Forms.Label
     Friend WithEvents supprimer_btn As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class
