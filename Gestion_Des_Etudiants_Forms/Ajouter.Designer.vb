@@ -37,10 +37,8 @@ Partial Class AjouterPage
         Me.birthdate_picker = New System.Windows.Forms.DateTimePicker()
         Me.filiere_cb = New System.Windows.Forms.ComboBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Sex_placeholder = New System.Windows.Forms.Label()
         Me.email_tb = New System.Windows.Forms.TextBox()
         Me.email_bg = New System.Windows.Forms.PictureBox()
-        Me.filiere_placeholder = New System.Windows.Forms.Label()
         Me.etudiant_l = New System.Windows.Forms.Label()
         Me.notes_l = New System.Windows.Forms.Label()
         Me.note1_tb = New System.Windows.Forms.TextBox()
@@ -67,6 +65,12 @@ Partial Class AjouterPage
         Me.note7_tb = New System.Windows.Forms.TextBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.erreur_l = New System.Windows.Forms.Label()
+        Me.filiere_l = New System.Windows.Forms.Label()
+        Me.sexe_l = New System.Windows.Forms.Label()
+        Me.email_l = New System.Windows.Forms.Label()
+        Me.prenom_l = New System.Windows.Forms.Label()
+        Me.nom_l = New System.Windows.Forms.Label()
+        Me.cin_l = New System.Windows.Forms.Label()
         CType(Me.cin_bg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.name_bg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.birthdate_bg, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -116,13 +120,12 @@ Partial Class AjouterPage
         '
         Me.cin_tb.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.cin_tb.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cin_tb.ForeColor = System.Drawing.Color.Gray
-        Me.cin_tb.Location = New System.Drawing.Point(77, 157)
+        Me.cin_tb.ForeColor = System.Drawing.Color.Black
+        Me.cin_tb.Location = New System.Drawing.Point(77, 163)
         Me.cin_tb.MaxLength = 64
         Me.cin_tb.Name = "cin_tb"
         Me.cin_tb.Size = New System.Drawing.Size(170, 26)
         Me.cin_tb.TabIndex = 0
-        Me.cin_tb.Text = "CIN"
         '
         'cin_bg
         '
@@ -157,13 +160,12 @@ Partial Class AjouterPage
         '
         Me.nom_tb.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.nom_tb.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nom_tb.ForeColor = System.Drawing.Color.Gray
-        Me.nom_tb.Location = New System.Drawing.Point(77, 217)
+        Me.nom_tb.ForeColor = System.Drawing.Color.Black
+        Me.nom_tb.Location = New System.Drawing.Point(77, 223)
         Me.nom_tb.MaxLength = 64
         Me.nom_tb.Name = "nom_tb"
         Me.nom_tb.Size = New System.Drawing.Size(170, 26)
         Me.nom_tb.TabIndex = 1
-        Me.nom_tb.Text = "Nom"
         '
         'name_bg
         '
@@ -191,13 +193,12 @@ Partial Class AjouterPage
         '
         Me.prenom_tb.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.prenom_tb.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.prenom_tb.ForeColor = System.Drawing.Color.Gray
-        Me.prenom_tb.Location = New System.Drawing.Point(77, 277)
+        Me.prenom_tb.ForeColor = System.Drawing.Color.Black
+        Me.prenom_tb.Location = New System.Drawing.Point(77, 283)
         Me.prenom_tb.MaxLength = 64
         Me.prenom_tb.Name = "prenom_tb"
         Me.prenom_tb.Size = New System.Drawing.Size(170, 26)
         Me.prenom_tb.TabIndex = 2
-        Me.prenom_tb.Text = "Prenom"
         '
         'prenom_bg
         '
@@ -229,7 +230,7 @@ Partial Class AjouterPage
         Me.sex_cb.ForeColor = System.Drawing.Color.Black
         Me.sex_cb.FormattingEnabled = True
         Me.sex_cb.Items.AddRange(New Object() {"Male", "Female"})
-        Me.sex_cb.Location = New System.Drawing.Point(77, 454)
+        Me.sex_cb.Location = New System.Drawing.Point(77, 456)
         Me.sex_cb.Name = "sex_cb"
         Me.sex_cb.Size = New System.Drawing.Size(185, 34)
         Me.sex_cb.TabIndex = 5
@@ -258,7 +259,7 @@ Partial Class AjouterPage
         Me.filiere_cb.ForeColor = System.Drawing.Color.Black
         Me.filiere_cb.FormattingEnabled = True
         Me.filiere_cb.Items.AddRange(New Object() {"1AP", "2AP", "3IIR", "4IIR", "5IIR", "3GI", "4GI", "5GI", "3IAII", "4IAII", "5IAII", "1GC", "2GC", "3GC", "4GC", "5GC", "1IFA", "2IFA", "3IFA", "4IFA", "5IFA"})
-        Me.filiere_cb.Location = New System.Drawing.Point(77, 514)
+        Me.filiere_cb.Location = New System.Drawing.Point(77, 516)
         Me.filiere_cb.Name = "filiere_cb"
         Me.filiere_cb.Size = New System.Drawing.Size(185, 34)
         Me.filiere_cb.TabIndex = 6
@@ -274,28 +275,16 @@ Partial Class AjouterPage
         Me.PictureBox1.TabIndex = 23
         Me.PictureBox1.TabStop = False
         '
-        'Sex_placeholder
-        '
-        Me.Sex_placeholder.AutoSize = True
-        Me.Sex_placeholder.BackColor = System.Drawing.Color.White
-        Me.Sex_placeholder.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Sex_placeholder.Location = New System.Drawing.Point(72, 458)
-        Me.Sex_placeholder.Name = "Sex_placeholder"
-        Me.Sex_placeholder.Size = New System.Drawing.Size(136, 26)
-        Me.Sex_placeholder.TabIndex = 25
-        Me.Sex_placeholder.Text = "Sexe                "
-        '
         'email_tb
         '
         Me.email_tb.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.email_tb.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.email_tb.ForeColor = System.Drawing.Color.Gray
-        Me.email_tb.Location = New System.Drawing.Point(77, 337)
+        Me.email_tb.ForeColor = System.Drawing.Color.Black
+        Me.email_tb.Location = New System.Drawing.Point(77, 343)
         Me.email_tb.MaxLength = 64
         Me.email_tb.Name = "email_tb"
         Me.email_tb.Size = New System.Drawing.Size(170, 26)
         Me.email_tb.TabIndex = 3
-        Me.email_tb.Text = "Email"
         '
         'email_bg
         '
@@ -307,17 +296,6 @@ Partial Class AjouterPage
         Me.email_bg.Size = New System.Drawing.Size(231, 60)
         Me.email_bg.TabIndex = 26
         Me.email_bg.TabStop = False
-        '
-        'filiere_placeholder
-        '
-        Me.filiere_placeholder.AutoSize = True
-        Me.filiere_placeholder.BackColor = System.Drawing.Color.White
-        Me.filiere_placeholder.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.filiere_placeholder.Location = New System.Drawing.Point(72, 517)
-        Me.filiere_placeholder.Name = "filiere_placeholder"
-        Me.filiere_placeholder.Size = New System.Drawing.Size(73, 26)
-        Me.filiere_placeholder.TabIndex = 32
-        Me.filiere_placeholder.Text = "Filiere "
         '
         'etudiant_l
         '
@@ -618,6 +596,78 @@ Partial Class AjouterPage
         Me.erreur_l.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.erreur_l.Visible = False
         '
+        'filiere_l
+        '
+        Me.filiere_l.AutoSize = True
+        Me.filiere_l.BackColor = System.Drawing.Color.White
+        Me.filiere_l.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.filiere_l.ForeColor = System.Drawing.Color.Gray
+        Me.filiere_l.Location = New System.Drawing.Point(75, 509)
+        Me.filiere_l.Name = "filiere_l"
+        Me.filiere_l.Size = New System.Drawing.Size(39, 15)
+        Me.filiere_l.TabIndex = 121
+        Me.filiere_l.Text = "Filiere"
+        '
+        'sexe_l
+        '
+        Me.sexe_l.AutoSize = True
+        Me.sexe_l.BackColor = System.Drawing.Color.White
+        Me.sexe_l.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.sexe_l.ForeColor = System.Drawing.Color.Gray
+        Me.sexe_l.Location = New System.Drawing.Point(75, 449)
+        Me.sexe_l.Name = "sexe_l"
+        Me.sexe_l.Size = New System.Drawing.Size(32, 15)
+        Me.sexe_l.TabIndex = 120
+        Me.sexe_l.Text = "Sexe"
+        '
+        'email_l
+        '
+        Me.email_l.AutoSize = True
+        Me.email_l.BackColor = System.Drawing.Color.White
+        Me.email_l.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.email_l.ForeColor = System.Drawing.Color.Gray
+        Me.email_l.Location = New System.Drawing.Point(75, 329)
+        Me.email_l.Name = "email_l"
+        Me.email_l.Size = New System.Drawing.Size(36, 15)
+        Me.email_l.TabIndex = 119
+        Me.email_l.Text = "Email"
+        '
+        'prenom_l
+        '
+        Me.prenom_l.AutoSize = True
+        Me.prenom_l.BackColor = System.Drawing.Color.White
+        Me.prenom_l.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.prenom_l.ForeColor = System.Drawing.Color.Gray
+        Me.prenom_l.Location = New System.Drawing.Point(75, 269)
+        Me.prenom_l.Name = "prenom_l"
+        Me.prenom_l.Size = New System.Drawing.Size(49, 15)
+        Me.prenom_l.TabIndex = 118
+        Me.prenom_l.Text = "Prenom"
+        '
+        'nom_l
+        '
+        Me.nom_l.AutoSize = True
+        Me.nom_l.BackColor = System.Drawing.Color.White
+        Me.nom_l.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nom_l.ForeColor = System.Drawing.Color.Gray
+        Me.nom_l.Location = New System.Drawing.Point(75, 209)
+        Me.nom_l.Name = "nom_l"
+        Me.nom_l.Size = New System.Drawing.Size(32, 15)
+        Me.nom_l.TabIndex = 117
+        Me.nom_l.Text = "Nom"
+        '
+        'cin_l
+        '
+        Me.cin_l.AutoSize = True
+        Me.cin_l.BackColor = System.Drawing.Color.White
+        Me.cin_l.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cin_l.ForeColor = System.Drawing.Color.Gray
+        Me.cin_l.Location = New System.Drawing.Point(75, 149)
+        Me.cin_l.Name = "cin_l"
+        Me.cin_l.Size = New System.Drawing.Size(26, 15)
+        Me.cin_l.TabIndex = 116
+        Me.cin_l.Text = "CIN"
+        '
         'AjouterPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -625,6 +675,12 @@ Partial Class AjouterPage
         Me.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.BG2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(694, 671)
+        Me.Controls.Add(Me.filiere_l)
+        Me.Controls.Add(Me.sexe_l)
+        Me.Controls.Add(Me.email_l)
+        Me.Controls.Add(Me.prenom_l)
+        Me.Controls.Add(Me.nom_l)
+        Me.Controls.Add(Me.cin_l)
         Me.Controls.Add(Me.erreur_l)
         Me.Controls.Add(Me.note7_l)
         Me.Controls.Add(Me.note7_tb)
@@ -651,10 +707,8 @@ Partial Class AjouterPage
         Me.Controls.Add(Me.note1_tb)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.etudiant_l)
-        Me.Controls.Add(Me.filiere_placeholder)
         Me.Controls.Add(Me.email_tb)
         Me.Controls.Add(Me.email_bg)
-        Me.Controls.Add(Me.Sex_placeholder)
         Me.Controls.Add(Me.filiere_cb)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.sex_cb)
@@ -711,10 +765,8 @@ Partial Class AjouterPage
     Friend WithEvents birthdate_picker As System.Windows.Forms.DateTimePicker
     Friend WithEvents filiere_cb As System.Windows.Forms.ComboBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Sex_placeholder As System.Windows.Forms.Label
     Friend WithEvents email_tb As System.Windows.Forms.TextBox
     Friend WithEvents email_bg As System.Windows.Forms.PictureBox
-    Friend WithEvents filiere_placeholder As System.Windows.Forms.Label
     Friend WithEvents etudiant_l As System.Windows.Forms.Label
     Friend WithEvents notes_l As System.Windows.Forms.Label
     Friend WithEvents note1_tb As System.Windows.Forms.TextBox
@@ -741,4 +793,10 @@ Partial Class AjouterPage
     Friend WithEvents note7_tb As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox8 As System.Windows.Forms.PictureBox
     Friend WithEvents erreur_l As System.Windows.Forms.Label
+    Friend WithEvents filiere_l As System.Windows.Forms.Label
+    Friend WithEvents sexe_l As System.Windows.Forms.Label
+    Friend WithEvents email_l As System.Windows.Forms.Label
+    Friend WithEvents prenom_l As System.Windows.Forms.Label
+    Friend WithEvents nom_l As System.Windows.Forms.Label
+    Friend WithEvents cin_l As System.Windows.Forms.Label
 End Class

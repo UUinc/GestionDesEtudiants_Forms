@@ -21,6 +21,11 @@ Public Class AfficherPage
     End Sub
 
     Private Sub AfficherPage_VisibleChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.VisibleChanged
+
+        If Not Visible Then
+            Return
+        End If
+
         'Load data from db
         'Create connection with database
         Dim Connection = LoginPage.Connection

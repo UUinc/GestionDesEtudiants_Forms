@@ -72,12 +72,12 @@ Partial Class ModifierPage
         Me.etudiantCIN_search_tb = New System.Windows.Forms.TextBox()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.erreur_cinNotFound_l = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.cin_l = New System.Windows.Forms.Label()
+        Me.nom_l = New System.Windows.Forms.Label()
+        Me.prenom_l = New System.Windows.Forms.Label()
+        Me.email_l = New System.Windows.Forms.Label()
+        Me.sexe_l = New System.Windows.Forms.Label()
+        Me.filiere_l = New System.Windows.Forms.Label()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -690,77 +690,77 @@ Partial Class ModifierPage
         Me.erreur_cinNotFound_l.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.erreur_cinNotFound_l.Visible = False
         '
-        'Label2
+        'cin_l
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Gray
-        Me.Label2.Location = New System.Drawing.Point(75, 149)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(26, 15)
-        Me.Label2.TabIndex = 110
-        Me.Label2.Text = "CIN"
+        Me.cin_l.AutoSize = True
+        Me.cin_l.BackColor = System.Drawing.Color.White
+        Me.cin_l.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cin_l.ForeColor = System.Drawing.Color.Gray
+        Me.cin_l.Location = New System.Drawing.Point(75, 149)
+        Me.cin_l.Name = "cin_l"
+        Me.cin_l.Size = New System.Drawing.Size(26, 15)
+        Me.cin_l.TabIndex = 110
+        Me.cin_l.Text = "CIN"
         '
-        'Label3
+        'nom_l
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Gray
-        Me.Label3.Location = New System.Drawing.Point(75, 209)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(32, 15)
-        Me.Label3.TabIndex = 111
-        Me.Label3.Text = "Nom"
+        Me.nom_l.AutoSize = True
+        Me.nom_l.BackColor = System.Drawing.Color.White
+        Me.nom_l.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nom_l.ForeColor = System.Drawing.Color.Gray
+        Me.nom_l.Location = New System.Drawing.Point(75, 209)
+        Me.nom_l.Name = "nom_l"
+        Me.nom_l.Size = New System.Drawing.Size(32, 15)
+        Me.nom_l.TabIndex = 111
+        Me.nom_l.Text = "Nom"
         '
-        'Label4
+        'prenom_l
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.White
-        Me.Label4.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Gray
-        Me.Label4.Location = New System.Drawing.Point(75, 269)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(49, 15)
-        Me.Label4.TabIndex = 112
-        Me.Label4.Text = "Prenom"
+        Me.prenom_l.AutoSize = True
+        Me.prenom_l.BackColor = System.Drawing.Color.White
+        Me.prenom_l.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.prenom_l.ForeColor = System.Drawing.Color.Gray
+        Me.prenom_l.Location = New System.Drawing.Point(75, 269)
+        Me.prenom_l.Name = "prenom_l"
+        Me.prenom_l.Size = New System.Drawing.Size(49, 15)
+        Me.prenom_l.TabIndex = 112
+        Me.prenom_l.Text = "Prenom"
         '
-        'Label5
+        'email_l
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.White
-        Me.Label5.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Gray
-        Me.Label5.Location = New System.Drawing.Point(75, 329)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(36, 15)
-        Me.Label5.TabIndex = 113
-        Me.Label5.Text = "Email"
+        Me.email_l.AutoSize = True
+        Me.email_l.BackColor = System.Drawing.Color.White
+        Me.email_l.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.email_l.ForeColor = System.Drawing.Color.Gray
+        Me.email_l.Location = New System.Drawing.Point(75, 329)
+        Me.email_l.Name = "email_l"
+        Me.email_l.Size = New System.Drawing.Size(36, 15)
+        Me.email_l.TabIndex = 113
+        Me.email_l.Text = "Email"
         '
-        'Label6
+        'sexe_l
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.White
-        Me.Label6.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Gray
-        Me.Label6.Location = New System.Drawing.Point(75, 449)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(32, 15)
-        Me.Label6.TabIndex = 114
-        Me.Label6.Text = "Sexe"
+        Me.sexe_l.AutoSize = True
+        Me.sexe_l.BackColor = System.Drawing.Color.White
+        Me.sexe_l.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.sexe_l.ForeColor = System.Drawing.Color.Gray
+        Me.sexe_l.Location = New System.Drawing.Point(75, 449)
+        Me.sexe_l.Name = "sexe_l"
+        Me.sexe_l.Size = New System.Drawing.Size(32, 15)
+        Me.sexe_l.TabIndex = 114
+        Me.sexe_l.Text = "Sexe"
         '
-        'Label7
+        'filiere_l
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.White
-        Me.Label7.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Gray
-        Me.Label7.Location = New System.Drawing.Point(75, 509)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(39, 15)
-        Me.Label7.TabIndex = 115
-        Me.Label7.Text = "Filiere"
+        Me.filiere_l.AutoSize = True
+        Me.filiere_l.BackColor = System.Drawing.Color.White
+        Me.filiere_l.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.filiere_l.ForeColor = System.Drawing.Color.Gray
+        Me.filiere_l.Location = New System.Drawing.Point(75, 509)
+        Me.filiere_l.Name = "filiere_l"
+        Me.filiere_l.Size = New System.Drawing.Size(39, 15)
+        Me.filiere_l.TabIndex = 115
+        Me.filiere_l.Text = "Filiere"
         '
         'ModifierPage
         '
@@ -769,12 +769,12 @@ Partial Class ModifierPage
         Me.BackgroundImage = Global.GestionDesEtudiants.My.Resources.Resources.BG2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(694, 671)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.filiere_l)
+        Me.Controls.Add(Me.sexe_l)
+        Me.Controls.Add(Me.email_l)
+        Me.Controls.Add(Me.prenom_l)
+        Me.Controls.Add(Me.nom_l)
+        Me.Controls.Add(Me.cin_l)
         Me.Controls.Add(Me.erreur_cinNotFound_l)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.etudiantCIN_search_tb)
@@ -901,10 +901,10 @@ Partial Class ModifierPage
     Friend WithEvents etudiantCIN_search_tb As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
     Friend WithEvents erreur_cinNotFound_l As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents cin_l As System.Windows.Forms.Label
+    Friend WithEvents nom_l As System.Windows.Forms.Label
+    Friend WithEvents prenom_l As System.Windows.Forms.Label
+    Friend WithEvents email_l As System.Windows.Forms.Label
+    Friend WithEvents sexe_l As System.Windows.Forms.Label
+    Friend WithEvents filiere_l As System.Windows.Forms.Label
 End Class

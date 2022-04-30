@@ -6,6 +6,8 @@ Public Class ModifierPage
     Dim student_id As Long
 
     Private Sub back_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles back_btn.Click
+        ClearUI()
+
         AdminPage.Show()
         AdminPage.Location = Me.Location
         Me.Hide()
@@ -475,4 +477,27 @@ Public Class ModifierPage
             Return False
         End If
     End Function
+
+    Sub ClearUI()
+        etudiantCIN_search_tb.Text = ""
+        erreur_cinNotFound_l.Visible = False
+
+        cin_tb.Text = ""
+        nom_tb.Text = ""
+        prenom_tb.Text = ""
+        email_tb.Text = ""
+        birthdate_picker.Value = Date.Now
+        sex_cb.SelectedIndex = 0
+        filiere_cb.SelectedIndex = 0
+        'scores
+        note1_tb.Text = ""
+        note2_tb.Text = ""
+        note3_tb.Text = ""
+        note4_tb.Text = ""
+        note5_tb.Text = ""
+        note6_tb.Text = ""
+        note7_tb.Text = ""
+
+        erreur_l.Visible = False
+    End Sub
 End Class

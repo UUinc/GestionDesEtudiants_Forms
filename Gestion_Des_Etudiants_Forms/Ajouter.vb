@@ -3,78 +3,11 @@ Imports System.Data.OleDb
 
 Public Class AjouterPage
     Private Sub back_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles back_btn.Click
+        ClearUI()
+
         AdminPage.Show()
         AdminPage.Location = Me.Location
         Me.Hide()
-
-        'sex placeholder
-        Sex_placeholder.Visible = True
-        'filiere placeholder
-        filiere_placeholder.Visible = True
-    End Sub
-    'CIN Text Box
-    Private Sub cin_tb_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cin_tb.Enter
-        If cin_tb.Text = "CIN" Then
-            cin_tb.Text = ""
-        End If
-        cin_tb.ForeColor = Color.Black
-    End Sub
-
-    Private Sub cin_tb_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cin_tb.Leave
-        If cin_tb.Text = "" Then
-            cin_tb.Text = "CIN"
-            cin_tb.ForeColor = Color.Gray
-        End If
-    End Sub
-    'Nom Text Box
-    Private Sub nom_tb_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nom_tb.Enter
-        If nom_tb.Text = "Nom" Then
-            nom_tb.Text = ""
-        End If
-        nom_tb.ForeColor = Color.Black
-    End Sub
-
-    Private Sub nom_tb_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nom_tb.Leave
-        If nom_tb.Text = "" Then
-            nom_tb.Text = "Nom"
-            nom_tb.ForeColor = Color.Gray
-        End If
-    End Sub
-    'Prenom Text Box
-    Private Sub prenom_tb_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles prenom_tb.Enter
-        If prenom_tb.Text = "Prenom" Then
-            prenom_tb.Text = ""
-        End If
-        prenom_tb.ForeColor = Color.Black
-    End Sub
-
-    Private Sub prenom_tb_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles prenom_tb.Leave
-        If prenom_tb.Text = "" Then
-            prenom_tb.Text = "Prenom"
-            prenom_tb.ForeColor = Color.Gray
-        End If
-    End Sub
-    'Email Text Box
-    Private Sub email_tb_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles email_tb.Enter
-        If email_tb.Text = "Email" Then
-            email_tb.Text = ""
-        End If
-        email_tb.ForeColor = Color.Black
-    End Sub
-
-    Private Sub email_tb_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles email_tb.Leave
-        If email_tb.Text = "" Then
-            email_tb.Text = "Email"
-            email_tb.ForeColor = Color.Gray
-        End If
-    End Sub
-
-    Private Sub sex_CB_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sex_cb.SelectedIndexChanged
-        Sex_placeholder.Visible = False
-    End Sub
-
-    Private Sub filiere_CB_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles filiere_cb.SelectedIndexChanged
-        filiere_placeholder.Visible = False
     End Sub
 
     Private Sub Save()
@@ -164,7 +97,7 @@ Public Class AjouterPage
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Erreur")
-        End Try   
+        End Try
     End Sub
     'sauvgarder les donnees
     Private Sub save_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles save_btn.Click
@@ -203,12 +136,12 @@ Public Class AjouterPage
         End If
         'Sex
         If Not CheckSexInput() Then
-            Sex_placeholder.ForeColor = Color.Red
+            sex_cb.ForeColor = Color.Red
             IsError = True
         End If
         'Filiere
         If Not CheckFiliereInput() Then
-            filiere_placeholder.ForeColor = Color.Red
+            filiere_cb.ForeColor = Color.Red
             IsError = True
         End If
         'Notes
@@ -416,4 +349,24 @@ Public Class AjouterPage
             Return False
         End If
     End Function
+
+    Sub ClearUI()
+        cin_tb.Text = ""
+        nom_tb.Text = ""
+        prenom_tb.Text = ""
+        email_tb.Text = ""
+        birthdate_picker.Value = Date.Now
+        sex_cb.SelectedIndex = 0
+        filiere_cb.SelectedIndex = 0
+        'scores
+        note1_tb.Text = ""
+        note2_tb.Text = ""
+        note3_tb.Text = ""
+        note4_tb.Text = ""
+        note5_tb.Text = ""
+        note6_tb.Text = ""
+        note7_tb.Text = ""
+
+        erreur_l.Visible = False
+    End Sub
 End Class
