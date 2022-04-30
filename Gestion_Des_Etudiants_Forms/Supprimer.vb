@@ -40,4 +40,8 @@ Public Class SupprimerPage
             MessageBox.Show(ex.Message, "Erreur")
         End Try
     End Sub
+
+    Private Sub cin_tb_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cin_tb.TextChanged
+        erreur_l.Visible = False
+    End Sub
 End Class

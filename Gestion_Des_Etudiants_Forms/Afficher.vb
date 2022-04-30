@@ -20,7 +20,7 @@ Public Class AfficherPage
         Me.Hide()
     End Sub
 
-    Private Sub AfficherPage_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub AfficherPage_VisibleChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.VisibleChanged
         'Load data from db
         'Create connection with database
         Dim Connection = LoginPage.Connection
