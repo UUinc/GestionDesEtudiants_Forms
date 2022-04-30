@@ -110,12 +110,58 @@ Public Class AjouterPage
             'Fill user information
             sqlQry = "INSERT INTO Login(username, passwrd, email, permission, cin) VALUES(@username, @psswrd, @email, @permission, @cin)"
             Dim cmd4 As New OleDbCommand(sqlQry, Connection)
-            cmd4.Parameters.AddWithValue("@username", email_tb.Text)
-            cmd4.Parameters.AddWithValue("@psswrd", email_tb.Text)
+            cmd4.Parameters.AddWithValue("@username", email_tb.Text.Split("@")(0))
+            cmd4.Parameters.AddWithValue("@psswrd", email_tb.Text.Split("@")(0) & "123")
             cmd4.Parameters.AddWithValue("@email", email_tb.Text)
             cmd4.Parameters.AddWithValue("@permission", False)
             cmd4.Parameters.AddWithValue("@cin", cin_tb.Text)
             cmd4.ExecuteNonQuery()
+
+            'Fill student scores information
+            sqlQry = "INSERT INTO Score(score, course_id, student_id) VALUES(@score, @course_id, @student_id)"
+            Dim cmd5 As New OleDbCommand(sqlQry, Connection)
+            'score 1 Programmation Avancee
+            cmd5.Parameters.AddWithValue("@score", Double.Parse(note1_tb.Text))
+            cmd5.Parameters.AddWithValue("@course_id", 1)
+            cmd5.Parameters.AddWithValue("@student_id", cmd_result)
+            cmd5.ExecuteNonQuery()
+            'score 2 Programmation Evenmentielle
+            cmd5.Parameters.Clear()
+            cmd5.Parameters.AddWithValue("@score", Double.Parse(note2_tb.Text))
+            cmd5.Parameters.AddWithValue("@course_id", 2)
+            cmd5.Parameters.AddWithValue("@student_id", cmd_result)
+            cmd5.ExecuteNonQuery()
+            'score 3 Base de donnees
+            cmd5.Parameters.Clear()
+            cmd5.Parameters.AddWithValue("@score", Double.Parse(note3_tb.Text))
+            cmd5.Parameters.AddWithValue("@course_id", 3)
+            cmd5.Parameters.AddWithValue("@student_id", cmd_result)
+            cmd5.ExecuteNonQuery()
+            'score 4 Systemes d'exploitation
+            cmd5.Parameters.Clear()
+            cmd5.Parameters.AddWithValue("@score", Double.Parse(note4_tb.Text))
+            cmd5.Parameters.AddWithValue("@course_id", 4)
+            cmd5.Parameters.AddWithValue("@student_id", cmd_result)
+            cmd5.ExecuteNonQuery()
+            'score 5 Analyse
+            cmd5.Parameters.Clear()
+            cmd5.Parameters.AddWithValue("@score", Double.Parse(note5_tb.Text))
+            cmd5.Parameters.AddWithValue("@course_id", 5)
+            cmd5.Parameters.AddWithValue("@student_id", cmd_result)
+            cmd5.ExecuteNonQuery()
+            'score 6 Statistique
+            cmd5.Parameters.Clear()
+            cmd5.Parameters.AddWithValue("@score", Double.Parse(note6_tb.Text))
+            cmd5.Parameters.AddWithValue("@course_id", 6)
+            cmd5.Parameters.AddWithValue("@student_id", cmd_result)
+            cmd5.ExecuteNonQuery()
+            'score 7 Electronique analogique
+            cmd5.Parameters.Clear()
+            cmd5.Parameters.AddWithValue("@score", Double.Parse(note7_tb.Text))
+            cmd5.Parameters.AddWithValue("@course_id", 7)
+            cmd5.Parameters.AddWithValue("@student_id", cmd_result)
+            cmd5.ExecuteNonQuery()
+
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Erreur")
         End Try   

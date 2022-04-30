@@ -3,6 +3,11 @@
 Public Class LoginPage
     'database connection
     Public Connection As New OleDbConnection(My.Settings.GestionDesEtudiants_DBConnectionString)
+    Dim permission As Boolean = False
+
+    Public Function GetPermission() As Boolean
+        Return permission
+    End Function
 
     'mouse hover the login button
     Private Sub login_btn_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles login_btn.MouseEnter
@@ -78,13 +83,23 @@ Public Class LoginPage
         Dim count = Convert.ToInt32(cmd.ExecuteScalar())
 
         If count > 0 Then
-            'show and set same location as loginpage
-            AdminPage.Show()
-            AdminPage.Location = Me.Location
 
+            Dim cmd2 As New OleDbCommand("select permission from Login where username= @username and passwrd= @password", Connection)
+            cmd2.Parameters.AddWithValue("@username", OleDbType.VarChar).Value = username_tb.Text
+            cmd2.Parameters.AddWithValue("@password", OleDbType.VarChar).Value = password_tb.Text
+            permission = Convert.ToBoolean(cmd2.ExecuteScalar())
+
+            If permission = True Then
+                'show and set same location as loginpage
+                AdminPage.Show()
+                AdminPage.Location = Me.Location
+            Else
+                'show and set same location as loginpage
+                AfficherPage.Show()
+                AfficherPage.Location = Me.Location
+            End If
             'hide loginpage
             Me.Hide()
-
         Else
             erreur_l.Visible = True
         End If
